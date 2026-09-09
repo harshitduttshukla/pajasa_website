@@ -1,0 +1,190 @@
+'use client';
+
+import React, { use, useState, useMemo } from 'react';
+import Link from 'next/link';
+import { PROPERTIES_DATA } from '@/data/mockData';
+import { PropertyCard } from '@/components/property/PropertyCard';
+import { PropertyFilters } from '@/components/property/PropertyFilters';
+import { Property } from '@/types';
+import { BookingModal } from '@/components/ui/BookingModal';
+import { Building2, MapPin, Search } from 'lucide-react';
+
+interface LocationPageProps {
+  params: Promise<{
+    countryCode: string;
+    slug?: string[];
+  }>;
+}
+
+export default function LocationPropertiesPage({ params }: LocationPageProps) {
+  const resolvedParams = use(params);
+  const countryCode = resolvedParams.countryCode?.toLowerCase() || 'in';
+  const slugArray = resolvedParams.slug || [];
+
+  // Determine location query name based on slug or countryCode
+  const locationName = useMemo(() => {
+    if (slugArray.length > 1) {
+      // e.g. /in/mumbai/powai -> Powai
+      const rawLocality = slugArray[1].replace(/-/g, ' ');
+      return rawLocality.charAt(0).toUpperCase() + rawLocality.slice(1);
+    } else if (slugArray.length === 1) {
+      // e.g. /in/mumbai -> Mumbai
+      const rawCity = slugArray[0].replace(/-/g, ' ');
+      if (rawCity === 'new delhi') return 'New Delhi';
+      return rawCity.charAt(0).toUpperCase() + rawCity.slice(1);
+    } else {
+      // e.g. /sg/ or /ae/
+      if (countryCode === 'sg') return 'Singapore';
+      if (countryCode === 'ae') return 'Dubai';
+      if (countryCode === 'uk') return 'London';
+      if (countryCode === 'us') return 'New York';
+      return 'India';
+    }
+  }, [countryCode, slugArray]);
+
+  const [selectedCity, setSelectedCity] = useState(locationName);
+  const [searchTerm, setSearchTerm] = useState('');
+  const [maxPrice, setMaxPrice] = useState(10000);
+  const [selectedBedrooms, setSelectedBedrooms] = useState<number | null>(null);
+  const [selectedProperty, setSelectedProperty] = useState<Property | null>(null);
+  const [bookingModalOpen, setBookingModalOpen] = useState(false);
+
+  const filteredProperties = useMemo(() => {
+    return PROPERTIES_DATA.filter((property) => {
+      // Match city or locality
+      if (selectedCity) {
+        const query = selectedCity.toLowerCase();
+        const matchesCity = property.city.toLowerCase().includes(query);
+        const matchesLocality = property.locality.toLowerCase().includes(query);
+        const matchesDesc = property.description.toLowerCase().includes(query);
+        if (!matchesCity && !matchesLocality && !matchesDesc) {
+          // If no direct property in exact mock data, show available properties for broad region fallback
+          if (PROPERTIES_DATA.some(p => p.city.toLowerCase().includes(query))) {
+            return false;
+          }
+        }
+      }
+      // Keyword search
+      if (searchTerm) {
+        const query = searchTerm.toLowerCase();
+        const matchesTitle = property.title.toLowerCase().includes(query);
+        const matchesLocality = property.locality.toLowerCase().includes(query);
+        const matchesDesc = property.description.toLowerCase().includes(query);
+        if (!matchesTitle && !matchesLocality && !matchesDesc) return false;
+      }
+      // Max price
+      if (property.pricePerNight > maxPrice) return false;
+      // Bedrooms
+      if (selectedBedrooms !== null && property.bedrooms !== selectedBedrooms) return false;
+
+      return true;
+    });
+  }, [selectedCity, searchTerm, maxPrice, selectedBedrooms]);
+
+  const handleReset = () => {
+    setSelectedCity('');
+    setSearchTerm('');
+    setMaxPrice(10000);
+    setSelectedBedrooms(null);
+  };
+
+  const handleBookNow = (prop: Property) => {
+    setSelectedProperty(prop);
+    setBookingModalOpen(true);
+  };
+
+  return (
+    <div className="pt-36 pb-20 bg-[#FAFAF8] text-[#3F3F3F] min-h-screen">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Banner */}
+        <div className="mb-8 space-y-2">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-orange-50 border border-orange-200 text-[#F59A16] text-xs font-extrabold uppercase tracking-wider">
+            <MapPin className="w-4 h-4 text-[#F59A16]" />
+            <span>PAJASA Location Directory</span>
+          </div>
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#3F3F3F] tracking-tight">
+            Service Apartments in <span className="text-[#F59A16] capitalize">{locationName}</span>
+          </h1>
+          <p className="text-xs sm:text-sm text-[#666666] max-w-2xl font-normal">
+            Explore verified corporate housing and executive stays in {locationName}. Fully furnished residences with 24/7 caretaker, high-speed Wi-Fi, and GST tax credit invoices.
+          </p>
+        </div>
+
+        {/* Layout: Sidebar + Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          {/* Sidebar Filters */}
+          <div className="lg:col-span-4 sticky top-36">
+            <PropertyFilters
+              selectedCity={selectedCity}
+              setSelectedCity={setSelectedCity}
+              searchTerm={searchTerm}
+              setSearchTerm={setSearchTerm}
+              maxPrice={maxPrice}
+              setMaxPrice={setMaxPrice}
+              selectedBedrooms={selectedBedrooms}
+              setSelectedBedrooms={setSelectedBedrooms}
+              onReset={handleReset}
+            />
+          </div>
+
+          {/* Properties Grid */}
+          <div className="lg:col-span-8 space-y-6">
+            {/* Top Bar info */}
+            <div className="flex items-center justify-between p-4 rounded-2xl bg-white border border-[#E8E8E8] text-xs font-semibold text-[#3F3F3F] shadow-xs">
+              <span>
+                Showing <strong className="text-[#F59A16]">{filteredProperties.length}</strong> available executive stays in <strong className="capitalize">{locationName}</strong>
+              </span>
+
+              <Link
+                href="/properties"
+                className="px-3 py-1 rounded-full bg-orange-50 border border-orange-200 text-[#F59A16] font-bold hover:bg-orange-100 transition-colors"
+              >
+                View All Cities
+              </Link>
+            </div>
+
+            {filteredProperties.length === 0 ? (
+              <div className="p-12 text-center bg-white border border-[#E8E8E8] rounded-2xl space-y-4 shadow-xs">
+                <Search className="w-12 h-12 text-slate-300 mx-auto" />
+                <h3 className="text-lg font-extrabold text-[#3F3F3F]">Serviced Residences in {locationName}</h3>
+                <p className="text-xs text-[#666666] max-w-sm mx-auto">
+                  Our corporate travel desk coordinates instant custom housing solutions in {locationName}. Contact us for direct inquiries and corporate agreements.
+                </p>
+                <div className="flex items-center justify-center gap-3 pt-2">
+                  <button
+                    onClick={handleReset}
+                    className="px-4 py-2.5 rounded-xl bg-[#F59A16] hover:bg-[#e08a0b] text-white font-extrabold text-xs shadow-xs cursor-pointer"
+                  >
+                    Browse All Serviced Stays
+                  </button>
+                  <Link
+                    href="/contact"
+                    className="px-4 py-2.5 rounded-xl bg-slate-100 border border-[#E8E8E8] hover:bg-slate-200 text-[#3F3F3F] font-extrabold text-xs shadow-xs"
+                  >
+                    Contact Concierge Desk
+                  </Link>
+                </div>
+              </div>
+            ) : (
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                {filteredProperties.map((property) => (
+                  <PropertyCard
+                    key={property.id}
+                    property={property}
+                    onBookNow={handleBookNow}
+                  />
+                ))}
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
+
+      <BookingModal
+        isOpen={bookingModalOpen}
+        onClose={() => setBookingModalOpen(false)}
+        selectedProperty={selectedProperty}
+      />
+    </div>
+  );
+}

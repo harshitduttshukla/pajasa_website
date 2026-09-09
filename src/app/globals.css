@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --background: 40 20% 98%; /* #FAFAF8 */
+    --foreground: 0 0% 25%; /* #3F3F3F */
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 25%;
+    --primary: 35 92% 52%; /* PAJASA Orange #F59A16 */
+    --primary-hover: 35 92% 46%; /* #E08905 */
+    --charcoal: 0 0% 25%; /* #3F3F3F */
+    --border: 0 0% 91%; /* #E8E8E8 */
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  letter-spacing: -0.015em;
+  color: #3f3f3f;
+}
+
+h1, h2, h3, h4, .font-display {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  letter-spacing: -0.02em;
+  color: #3f3f3f;
+}
+
+body {
+  background-color: #fafaf8;
+  color: #3f3f3f;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom PAJASA Brand Utility Classes */
+.bg-pajasa-orange {
+  background-color: #f59a16;
+}
+
+.hover\:bg-pajasa-orange-dark:hover {
+  background-color: #e08a0b;
+}
+
+.text-pajasa-orange {
+  color: #f59a16;
+}
+
+.border-pajasa-orange {
+  border-color: #f59a16;
+}
+
+.text-pajasa-charcoal {
+  color: #3f3f3f;
+}
+
+/* Accessible Focus Ring */
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+  outline: 2px solid #f59a16;
+  outline-offset: 2px;
+}
+
+/* Hover Image Zoom Utility */
+.group:hover .img-zoom {
+  transform: scale(1.05);
+}
+
+.img-zoom {
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Respect Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
