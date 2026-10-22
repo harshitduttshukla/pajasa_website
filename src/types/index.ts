@@ -1,6 +1,7 @@
 export interface Property {
   id: string;
   slug: string;
+  href?: string; // original site URL for migrated listings
   title: string;
   tagline: string;
   city: string;
@@ -15,6 +16,7 @@ export interface Property {
   maxGuests: number;
   sqft: number;
   images: string[];
+  imageAlts?: Record<string, string>;
   featured: boolean;
   isWishlisted?: boolean;
   amenities: {
@@ -24,6 +26,10 @@ export interface Property {
     category: 'comfort' | 'work' | 'kitchen' | 'leisure' | 'security';
   }[];
   description: string;
+  descriptionHtml?: boolean; // description is WordPress post_content (HTML, wpautop formatting)
+  isSource?: boolean; // migrated from the original WordPress site
+  category?: string;
+  seo?: import('@/lib/api').SourceSeo | null;
   highlights: string[];
   houseRules: string[];
   locationCoords: {

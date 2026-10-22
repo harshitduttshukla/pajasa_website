@@ -10,10 +10,12 @@ interface PropertyFiltersProps {
   searchTerm: string;
   setSearchTerm: (term: string) => void;
   maxPrice: number;
+  priceCeiling?: number;
   setMaxPrice: (price: number) => void;
   selectedBedrooms: number | null;
   setSelectedBedrooms: (beds: number | null) => void;
   onReset: () => void;
+  cities?: { id: string | number; name: string }[];
 }
 
 export function PropertyFilters({
@@ -22,11 +24,14 @@ export function PropertyFilters({
   searchTerm,
   setSearchTerm,
   maxPrice,
+  priceCeiling = 10000,
   setMaxPrice,
   selectedBedrooms,
   setSelectedBedrooms,
   onReset,
+  cities,
 }: PropertyFiltersProps) {
+
   return (
     <div className="bg-white border border-[#E8E8E8] rounded-2xl p-6 space-y-6 text-[#3F3F3F] shadow-xs">
       
@@ -71,12 +76,13 @@ export function PropertyFilters({
           className="w-full py-2.5 px-3 rounded-xl bg-slate-50 border border-[#E8E8E8] text-xs font-bold text-[#3F3F3F] focus:outline-none focus:border-[#F59A16] cursor-pointer"
         >
           <option value="">All Cities</option>
-          {CITIES_DATA.map((c) => (
+          {(cities && cities.length > 0 ? cities : CITIES_DATA).map((c) => (
             <option key={c.id} value={c.name}>
               {c.name}
             </option>
           ))}
         </select>
+
       </div>
 
       {/* Price Range Slider */}
@@ -88,7 +94,7 @@ export function PropertyFilters({
         <input
           type="range"
           min="2500"
-          max="10000"
+          max={priceCeiling}
           step="500"
           value={maxPrice}
           onChange={(e) => setMaxPrice(Number(e.target.value))}

@@ -1,17 +1,22 @@
 'use client';
 
-import React, { Suspense, useState, useMemo } from 'react';
+import React, { Suspense, useState, useMemo, useEffect } from 'react';
 import { useSearchParams } from 'next/navigation';
-import { PROPERTIES_DATA } from '@/data/mockData';
 import { PropertyCard } from '@/components/property/PropertyCard';
 import { PropertyFilters } from '@/components/property/PropertyFilters';
 import { Property } from '@/types';
 import { BookingModal } from '@/components/ui/BookingModal';
-import { Building2, Search } from 'lucide-react';
+import { Building2, Search, AlertCircle } from 'lucide-react';
+import { fetchProperties, fetchCities, transformBackendProperty, BackendCity } from '@/lib/api';
 
 function CatalogContent() {
   const searchParams = useSearchParams();
   const initialCity = searchParams.get('city') || '';
+
+  const [properties, setProperties] = useState<Property[]>([]);
+  const [cities, setCities] = useState<BackendCity[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
   const [selectedCity, setSelectedCity] = useState(initialCity);
   const [searchTerm, setSearchTerm] = useState('');
@@ -20,8 +25,38 @@ function CatalogContent() {
   const [selectedProperty, setSelectedProperty] = useState<Property | null>(null);
   const [bookingModalOpen, setBookingModalOpen] = useState(false);
 
+  useEffect(() => {
+    let isMounted = true;
+    async function loadData() {
+      try {
+        setIsLoading(true);
+        setError(null);
+        const [propsRes, citiesRes] = await Promise.all([
+          fetchProperties({ limit: 100 }),
+          fetchCities({ limit: 100 }).catch(() => ({ items: [] as BackendCity[] })),
+        ]);
+        if (isMounted) {
+          setProperties(propsRes.items.map(transformBackendProperty));
+          setCities(citiesRes.items || []);
+        }
+      } catch (err: any) {
+        if (isMounted) {
+          setError('Unable to load apartments. Please try again.');
+        }
+      } finally {
+        if (isMounted) {
+          setIsLoading(false);
+        }
+      }
+    }
+    loadData();
+    return () => {
+      isMounted = false;
+    };
+  }, []);
+
   const filteredProperties = useMemo(() => {
-    return PROPERTIES_DATA.filter((property) => {
+    return properties.filter((property) => {
       // City filter
       if (selectedCity && !property.city.toLowerCase().includes(selectedCity.toLowerCase())) {
         return false;
@@ -41,7 +76,8 @@ function CatalogContent() {
 
       return true;
     });
-  }, [selectedCity, searchTerm, maxPrice, selectedBedrooms]);
+  }, [properties, selectedCity, searchTerm, maxPrice, selectedBedrooms]);
+
 
   const handleReset = () => {
     setSelectedCity('');
@@ -88,6 +124,7 @@ function CatalogContent() {
               selectedBedrooms={selectedBedrooms}
               setSelectedBedrooms={setSelectedBedrooms}
               onReset={handleReset}
+              cities={cities}
             />
           </div>
 
@@ -106,7 +143,24 @@ function CatalogContent() {
               )}
             </div>
 
-            {filteredProperties.length === 0 ? (
+            {isLoading ? (
+              <div className="py-16 text-center bg-white border border-[#E8E8E8] rounded-2xl space-y-3 shadow-xs">
+                <div className="inline-block w-8 h-8 border-3 border-[#F59A16] border-t-transparent rounded-full animate-spin" />
+                <p className="text-xs font-semibold text-[#666666]">Loading apartments...</p>
+              </div>
+            ) : error ? (
+              <div className="p-12 text-center bg-white border border-red-100 rounded-2xl space-y-3 shadow-xs">
+                <AlertCircle className="w-10 h-10 text-red-500 mx-auto" />
+                <h3 className="text-sm font-extrabold text-red-600">Unable to load apartments</h3>
+                <p className="text-xs text-[#666666] max-w-sm mx-auto">Please check your connection or try again.</p>
+                <button
+                  onClick={() => window.location.reload()}
+                  className="px-4 py-2.5 rounded-xl bg-[#F59A16] hover:bg-[#e08a0b] text-white font-extrabold text-xs shadow-xs cursor-pointer"
+                >
+                  Retry
+                </button>
+              </div>
+            ) : filteredProperties.length === 0 ? (
               <div className="p-12 text-center bg-white border border-[#E8E8E8] rounded-2xl space-y-4 shadow-xs">
                 <Search className="w-12 h-12 text-slate-300 mx-auto" />
                 <h3 className="text-lg font-extrabold text-[#3F3F3F]">No Serviced Stays Found</h3>
@@ -132,6 +186,7 @@ function CatalogContent() {
               </div>
             )}
           </div>
+
 
         </div>
 
