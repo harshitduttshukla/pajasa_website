@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { Bath, Bed, Heart, MapPin, Users } from 'lucide-react';
 import { Property } from '@/types';
 import { formatCurrency } from '@/lib/utils';
+import { getImageUrl } from '@/lib/api';
 
 interface PropertyCardProps {
   property: Property;
@@ -22,6 +23,8 @@ export function PropertyCard({ property, badgeText, onBookNow }: PropertyCardPro
   };
 
   const defaultBadge = badgeText || (property.featured ? 'POPULAR' : 'PREMIUM');
+  const cardImage = getImageUrl(property.images?.[0]);
+  const href = property.href || `/properties/${property.slug}`;
 
   return (
     <article className="group bg-white border border-[#E8E8E8] rounded-2xl overflow-hidden shadow-xs hover:shadow-md transition-all duration-300 flex flex-col justify-between h-full">
@@ -29,10 +32,11 @@ export function PropertyCard({ property, badgeText, onBookNow }: PropertyCardPro
         {/* Top Image Container (16:9 Ratio) */}
         <div className="relative aspect-[16/10] overflow-hidden bg-slate-100">
           <img
-            src={property.images[0] || 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80'}
-            alt={property.title}
+            src={cardImage}
+            alt={property.imageAlts?.[property.images?.[0]] ?? property.title}
             className="w-full h-full object-cover img-zoom"
           />
+
 
           {/* Category Badge Top Left */}
           <div className="absolute top-3 left-3 z-10">
@@ -57,7 +61,7 @@ export function PropertyCard({ property, badgeText, onBookNow }: PropertyCardPro
         {/* Card Body */}
         <div className="p-4 space-y-2.5">
           {/* Title */}
-          <Link href={`/properties/${property.slug}`} className="block">
+          <Link href={href} className="block">
             <h3 className="text-base font-extrabold text-[#3F3F3F] hover:text-[#F59A16] transition-colors line-clamp-1">
               {property.title}
             </h3>
@@ -66,8 +70,11 @@ export function PropertyCard({ property, badgeText, onBookNow }: PropertyCardPro
           {/* Location */}
           <div className="flex items-center gap-1 text-xs text-[#666666] font-medium">
             <MapPin className="w-3.5 h-3.5 text-slate-400 shrink-0" strokeWidth={1.5} />
-            <span className="truncate">{property.locality}, {property.city}</span>
+            <span className="truncate">
+              {property.locality && property.locality !== property.city ? `${property.locality}, ` : ''}{property.city}
+            </span>
           </div>
+
 
           {/* Price */}
           <div className="pt-1 flex items-baseline gap-1">

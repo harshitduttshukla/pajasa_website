@@ -7,11 +7,12 @@ import { ChevronLeft, ChevronRight, Grid, Image as ImageIcon, X } from 'lucide-r
 interface PropertyGalleryProps {
   images: string[];
   title: string;
+  alts?: Record<string, string>; // original image alt text, keyed by image URL
 }
 
 const FALLBACK_IMAGE = 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80';
 
-export function PropertyGallery({ images, title }: PropertyGalleryProps) {
+export function PropertyGallery({ images, title, alts }: PropertyGalleryProps) {
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [activeImageIndex, setActiveImageIndex] = useState(0);
 
@@ -38,7 +39,7 @@ export function PropertyGallery({ images, title }: PropertyGalleryProps) {
               onError={(e) => {
                 (e.target as HTMLImageElement).src = FALLBACK_IMAGE;
               }}
-              alt={`${title} main view`}
+              alt={alts?.[displayImages[0]] ?? `${title} main view`}
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
             />
             <div className="absolute inset-0 bg-slate-950/20 group-hover:bg-transparent transition-colors" />
@@ -62,7 +63,7 @@ export function PropertyGallery({ images, title }: PropertyGalleryProps) {
                     onError={(e) => {
                       (e.target as HTMLImageElement).src = FALLBACK_IMAGE;
                     }}
-                    alt={`${title} photo ${imageIndex + 1}`}
+                    alt={alts?.[img] ?? `${title} photo ${imageIndex + 1}`}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-slate-950/20 group-hover:bg-transparent transition-colors" />
@@ -122,7 +123,7 @@ export function PropertyGallery({ images, title }: PropertyGalleryProps) {
               onError={(e) => {
                 (e.target as HTMLImageElement).src = FALLBACK_IMAGE;
               }}
-              alt={`${title} photo ${activeImageIndex + 1}`}
+              alt={alts?.[displayImages[activeImageIndex]] ?? `${title} photo ${activeImageIndex + 1}`}
               className="max-w-full max-h-[85vh] object-contain rounded-2xl shadow-2xl"
             />
 
