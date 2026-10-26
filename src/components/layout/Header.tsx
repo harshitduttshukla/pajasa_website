@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
 import { ChevronDown, Menu, Phone } from 'lucide-react';
 import { CITIES_DATA } from '@/data/mockData';
-import { TOP_NAV_CITIES } from '@/config/locationsData';
+import { cityUrl } from '@/lib/utils';
 import { MobileNav } from './MobileNav';
 
 interface HeaderProps {
@@ -37,7 +37,7 @@ export function Header({ onOpenBookingModal }: HeaderProps) {
     const city = e.target.value;
     setSelectedCity(city);
     if (city) {
-      router.push(`/properties?city=${encodeURIComponent(city)}`);
+      router.push(cityUrl(city));
     }
   };
 
@@ -97,13 +97,14 @@ export function Header({ onOpenBookingModal }: HeaderProps) {
                 className="appearance-none bg-transparent pr-5 py-1 text-xs font-bold uppercase tracking-wider text-[#3F3F3F] focus:outline-none cursor-pointer border-none"
                 aria-label="Select City Navigation"
               >
-                <option value="" className="text-[#3F3F3F]">SELECT CITY ▼</option>
+                <option value="" className="text-[#3F3F3F]">SELECT CITY</option>
                 {CITIES_DATA.map((c) => (
                   <option key={c.id} value={c.name} className="text-[#3F3F3F]">
                     {c.name}
                   </option>
                 ))}
               </select>
+              <ChevronDown className="pointer-events-none absolute right-0 w-4 h-4" />
             </div>
 
             {/* Phone Number */}
@@ -141,23 +142,6 @@ export function Header({ onOpenBookingModal }: HeaderProps) {
             >
               <Menu className="w-6 h-6" />
             </button>
-          </div>
-        </div>
-
-        {/* Secondary City Navigation Bar */}
-        <div className="w-full bg-[#FAF9F6] border-t border-[#E8E8E8] py-2.5">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex items-center justify-between gap-4 lg:gap-8 overflow-x-auto whitespace-nowrap scrollbar-none py-0.5">
-              {TOP_NAV_CITIES.map((city) => (
-                <Link
-                  key={city.name}
-                  href={city.slug}
-                  className="text-xs sm:text-[13px] font-medium text-[#4A4A4A] hover:text-[#F59A16] transition-colors shrink-0 py-0.5"
-                >
-                  {city.name}
-                </Link>
-              ))}
-            </div>
           </div>
         </div>
       </header>

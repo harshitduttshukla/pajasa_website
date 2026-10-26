@@ -136,14 +136,14 @@ export const PAJASA_CITIES: City[] = [
 export const CITIES_DATA = PAJASA_CITIES;
 
 export const PAJASA_LOCATIONS = [
-  { name: 'Powai, Mumbai', link: '/properties?city=Mumbai', count: '6 Listings', image: 'https://www.pajasaapartments.com/wp-content/uploads/2019/09/Serviced-Apartments-in-Powai-Mumbai.jpeg', desc: 'Serviced Apartments in Powai Mumbai' },
-  { name: 'Cyber City, Gurgaon', link: '/properties?city=Gurugram', count: '3 Listings', image: 'https://www.pajasaapartments.com/wp-content/uploads/2019/09/Serviced-Apartments-in-Cyber-City-Gurgaon-by-PAJASA.jpeg', desc: 'Service Apartments in Cyber City Gurgaon, India' },
-  { name: 'Baner, Pune', link: '/properties?city=Pune', count: '4 Listings', image: 'https://www.pajasaapartments.com/wp-content/uploads/2024/06/Service-Apartments-in-Baner-Pune-by-PAJASA-1170x921.jpeg', desc: 'Service Apartments in Baner, Pune, India' },
-  { name: 'Whitefield, Bengaluru', link: '/properties?city=Bengaluru', count: '3 Listings', image: 'https://www.pajasaapartments.com/wp-content/uploads/2026/05/Service-Apartments-in-Whitefield-Bengaluru-PAJASA-1170x921.jpg', desc: 'Service Apartments in Whitefield Bengaluru' },
-  { name: 'Kondapur, Hyderabad', link: '/properties?city=Hyderabad', count: '2 Listings', image: 'https://www.pajasaapartments.com/wp-content/uploads/2024/04/Service-Apartments-in-Kondapur-Hyderabad-1170x921.jpeg', desc: 'Service Apartments in Kondapur Hyderabad' },
-  { name: 'T Nagar, Chennai', link: '/properties?city=Chennai', count: '3 Listings', image: 'https://www.pajasaapartments.com/wp-content/uploads/2019/09/Service-Apartments-in-T-Nagar-Chennai-by-PAJASA.jpeg', desc: 'Service Apartments in T Nagar Chennai' },
-  { name: 'Anna Nagar, Chennai', link: '/properties?city=Chennai', count: '1 Listings', image: 'https://www.pajasaapartments.com/wp-content/uploads/2026/05/Service-Apartments-in-Anna-Nagar-Chennai-by-PAJASA-1170x921.jpg', desc: 'Service Apartments in Anna Nagar Chennai' },
-  { name: 'Salt Lake City, Kolkata', link: '/properties?city=Kolkata', count: '1 Listings', image: 'https://www.pajasaapartments.com/wp-content/uploads/2026/05/Service-apartments-in-Salt-Lake-Kolkata.webp', desc: 'Service Apartments in Salt Lake City, Kolkata' },
+  { name: 'Powai, Mumbai', link: '/in/mumbai/powai/', count: '6 Listings', image: 'https://www.pajasaapartments.com/wp-content/uploads/2019/09/Serviced-Apartments-in-Powai-Mumbai.jpeg', desc: 'Serviced Apartments in Powai Mumbai' },
+  { name: 'Cyber City, Gurgaon', link: '/in/gurugram/', count: '3 Listings', image: 'https://www.pajasaapartments.com/wp-content/uploads/2019/09/Serviced-Apartments-in-Cyber-City-Gurgaon-by-PAJASA.jpeg', desc: 'Service Apartments in Cyber City Gurgaon, India' },
+  { name: 'Baner, Pune', link: '/in/pune/baner/', count: '4 Listings', image: 'https://www.pajasaapartments.com/wp-content/uploads/2024/06/Service-Apartments-in-Baner-Pune-by-PAJASA-1170x921.jpeg', desc: 'Service Apartments in Baner, Pune, India' },
+  { name: 'Whitefield, Bengaluru', link: '/in/bengaluru/whitefield/', count: '3 Listings', image: 'https://www.pajasaapartments.com/wp-content/uploads/2026/05/Service-Apartments-in-Whitefield-Bengaluru-PAJASA-1170x921.jpg', desc: 'Service Apartments in Whitefield Bengaluru' },
+  { name: 'Kondapur, Hyderabad', link: '/in/hyderabad/kondapur/', count: '2 Listings', image: 'https://www.pajasaapartments.com/wp-content/uploads/2024/04/Service-Apartments-in-Kondapur-Hyderabad-1170x921.jpeg', desc: 'Service Apartments in Kondapur Hyderabad' },
+  { name: 'T Nagar, Chennai', link: '/in/chennai/', count: '3 Listings', image: 'https://www.pajasaapartments.com/wp-content/uploads/2019/09/Service-Apartments-in-T-Nagar-Chennai-by-PAJASA.jpeg', desc: 'Service Apartments in T Nagar Chennai' },
+  { name: 'Anna Nagar, Chennai', link: '/in/chennai/anna-nagar/', count: '1 Listings', image: 'https://www.pajasaapartments.com/wp-content/uploads/2026/05/Service-Apartments-in-Anna-Nagar-Chennai-by-PAJASA-1170x921.jpg', desc: 'Service Apartments in Anna Nagar Chennai' },
+  { name: 'Salt Lake City, Kolkata', link: '/in/kolkata/salt-lake-city/', count: '1 Listings', image: 'https://www.pajasaapartments.com/wp-content/uploads/2026/05/Service-apartments-in-Salt-Lake-Kolkata.webp', desc: 'Service Apartments in Salt Lake City, Kolkata' },
 ];
 
 export const PAJASA_WHY_CHOOSE: WhyUsFeature[] = [

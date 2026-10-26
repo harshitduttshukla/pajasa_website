@@ -3,8 +3,8 @@
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { Building, Compass, MapPin } from 'lucide-react';
-import { PAJASA_CITIES, PAJASA_LOCATIONS } from '@/data/mockData';
+import { Building, Compass } from 'lucide-react';
+import { PAJASA_CITIES } from '@/data/mockData';
 
 export function TrendingDestinations() {
   return (
@@ -51,8 +51,8 @@ export function TrendingDestinations() {
               </div>
 
               <div className="absolute bottom-0 left-0 right-0 p-5 z-10 space-y-1">
-                <Link href={`/properties?city=${encodeURIComponent(city.name)}`}>
-                  <h3 className="text-xl font-extrabold text-white group-hover:text-[#F59A16] transition-colors">
+                <Link href={`/in/${city.slug}/`}>
+                  <h3 className="text-xl font-extrabold text-[#F59A16]! drop-shadow-md group-hover:text-white! transition-colors">
                     {city.name}
                   </h3>
                 </Link>
@@ -61,27 +61,6 @@ export function TrendingDestinations() {
             </motion.div>
           ))}
         </div>
-
-        {/* Locality Chips Row */}
-        <div className="pt-4 space-y-3 text-center">
-          <h4 className="text-xs font-extrabold text-slate-400 uppercase tracking-wider">
-            Popular Corporate Localities
-          </h4>
-          <div className="flex flex-wrap items-center justify-center gap-2.5">
-            {PAJASA_LOCATIONS.map((loc, i) => (
-              <Link
-                key={i}
-                href={loc.link}
-                className="px-4 py-2 rounded-xl bg-slate-50 border border-[#E8E8E8] text-xs font-bold text-[#3F3F3F] hover:border-[#F59A16] hover:text-[#F59A16] transition-all flex items-center gap-1.5"
-              >
-                <MapPin className="w-3.5 h-3.5 text-[#F59A16]" />
-                <span>{loc.name}</span>
-                <span className="text-[10px] text-slate-400 font-normal">({loc.count})</span>
-              </Link>
-            ))}
-          </div>
-        </div>
-
       </div>
     </section>
   );

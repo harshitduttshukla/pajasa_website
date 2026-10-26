@@ -118,6 +118,15 @@ export function BlogSection() {
             ))}
           </div>
         )}
+
+        <div className="text-center">
+          <Link
+            href="/blog/"
+            className="inline-block px-5 py-2.5 rounded-xl border border-[#E8E8E8] text-xs font-extrabold tracking-wider uppercase text-[#3F3F3F] hover:border-[#F59A16] hover:text-[#F59A16] transition-all"
+          >
+            View All Articles
+          </Link>
+        </div>
       </div>
     </section>
   );

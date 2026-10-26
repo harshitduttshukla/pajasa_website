@@ -3,7 +3,6 @@
 import React from 'react';
 import { HeroSection } from '@/components/home/HeroSection';
 import { AmenitiesStrip } from '@/components/home/AmenitiesStrip';
-import { FeaturedProperties } from '@/components/home/FeaturedProperties';
 import { StatsAndTestimonial } from '@/components/home/StatsAndTestimonial';
 import { CorporateHousingCalc } from '@/components/home/CorporateHousingCalc';
 import { TrendingDestinations } from '@/components/home/TrendingDestinations';
@@ -20,7 +19,6 @@ export default function HomePage() {
     <div className="flex flex-col min-h-screen bg-[#FAFAF8] overflow-x-hidden">
       <HeroSection />
       <AmenitiesStrip />
-      <FeaturedProperties />
       <StatsAndTestimonial />
       <CorporateHousingCalc />
       <TrendingDestinations />

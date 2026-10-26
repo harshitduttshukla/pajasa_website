@@ -22,3 +22,8 @@ export function formatDate(dateString?: string): string {
     year: 'numeric',
   });
 }
+
+export function cityUrl(city: string): string {
+  const slug = city.trim().toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+  return `/in/${slug}/`;
+}

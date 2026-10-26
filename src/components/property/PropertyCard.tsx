@@ -27,7 +27,7 @@ export function PropertyCard({ property, badgeText, onBookNow }: PropertyCardPro
   const href = property.href || `/properties/${property.slug}`;
 
   return (
-    <article className="group bg-white border border-[#E8E8E8] rounded-2xl overflow-hidden shadow-xs hover:shadow-md transition-all duration-300 flex flex-col justify-between h-full">
+    <article className="group relative cursor-pointer bg-white border border-[#E8E8E8] rounded-2xl overflow-hidden shadow-xs hover:shadow-md transition-all duration-300 flex flex-col justify-between h-full">
       <div>
         {/* Top Image Container (16:9 Ratio) */}
         <div className="relative aspect-[16/10] overflow-hidden bg-slate-100">
@@ -39,7 +39,7 @@ export function PropertyCard({ property, badgeText, onBookNow }: PropertyCardPro
 
 
           {/* Category Badge Top Left */}
-          <div className="absolute top-3 left-3 z-10">
+          <div className="absolute top-3 left-3 z-10 pointer-events-none">
             <span className="px-3 py-1 rounded-md bg-[#F59A16] text-white text-[10px] font-extrabold tracking-wider uppercase shadow-xs">
               {defaultBadge}
             </span>
@@ -61,7 +61,7 @@ export function PropertyCard({ property, badgeText, onBookNow }: PropertyCardPro
         {/* Card Body */}
         <div className="p-4 space-y-2.5">
           {/* Title */}
-          <Link href={href} className="block">
+          <Link href={href} className="block after:absolute after:inset-0">
             <h3 className="text-base font-extrabold text-[#3F3F3F] hover:text-[#F59A16] transition-colors line-clamp-1">
               {property.title}
             </h3>

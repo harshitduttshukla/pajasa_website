@@ -3,6 +3,7 @@
 import React, { use, useState, useEffect } from 'react';
 import Link from 'next/link';
 import { fetchBlogBySlug, getBlogImageUrl, BackendBlog } from '@/lib/api';
+import { renderWpContent } from '@/lib/wpautop';
 import { ChevronRight, Calendar, Clock, User, Tag, ArrowLeft, AlertCircle } from 'lucide-react';
 
 interface BlogDetailPageProps {
@@ -153,11 +154,7 @@ export default function BlogDetailPage({ params }: BlogDetailPageProps) {
         {/* Content Body */}
         <div className="bg-white border border-[#E8E8E8] rounded-2xl p-6 sm:p-10 shadow-xs space-y-6 text-sm sm:text-base leading-relaxed text-[#4A4A4A]">
           {article.content ? (
-            article.content.split('\n\n').map((paragraph, idx) => (
-              <p key={idx} className="leading-relaxed">
-                {paragraph}
-              </p>
-            ))
+            <div className="wp-content" dangerouslySetInnerHTML={{ __html: renderWpContent(article.content) }} />
           ) : (
             <p className="leading-relaxed">
               {article.excerpt || 'Full article details managed directly from the PAJASA Dashboard.'}
