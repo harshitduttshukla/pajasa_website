@@ -51,7 +51,7 @@ export function LuxuryCollection() {
             >
               <div>
                 <div className="relative h-64 overflow-hidden rounded-t-3xl">
-                  <img
+                  <img loading="lazy" decoding="async"
                     src={property.images[0]}
                     alt={property.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"

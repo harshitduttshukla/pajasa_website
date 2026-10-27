@@ -36,7 +36,7 @@ export function TrendingDestinations() {
               transition={{ duration: 0.5, delay: idx * 0.08 }}
               className="group relative h-80 rounded-2xl overflow-hidden shadow-xs border border-[#E8E8E8] hover:shadow-md transition-all"
             >
-              <img
+              <img loading="lazy" decoding="async"
                 src={city.image}
                 alt={city.name}
                 className="w-full h-full object-cover img-zoom filter brightness-90"

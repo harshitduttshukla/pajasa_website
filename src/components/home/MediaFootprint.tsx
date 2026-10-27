@@ -20,7 +20,7 @@ export function MediaFootprint() {
               rel="noopener noreferrer"
               className="p-3 rounded-2xl bg-white border border-[#E8E8E8] hover:border-[#F59A16] hover:scale-105 transition-all flex items-center justify-center w-28 h-28 shadow-xs"
             >
-              <img
+              <img loading="lazy" decoding="async"
                 src={media.image}
                 alt={`PAJASA Media Feature - ${media.name}`}
                 className="max-w-full max-h-full object-contain rounded-xl"

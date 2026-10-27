@@ -50,7 +50,7 @@ export function Testimonials() {
 
               {/* Author */}
               <div className="pt-6 mt-6 border-t border-slate-800 flex items-center gap-3">
-                <img
+                <img loading="lazy" decoding="async"
                   src={review.authorAvatar}
                   alt={review.authorName}
                   className="w-11 h-11 rounded-full object-cover border border-amber-500/40"

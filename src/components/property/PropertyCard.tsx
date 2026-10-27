@@ -31,7 +31,7 @@ export function PropertyCard({ property, badgeText, onBookNow }: PropertyCardPro
       <div>
         {/* Top Image Container (16:9 Ratio) */}
         <div className="relative aspect-[16/10] overflow-hidden bg-slate-100">
-          <img
+          <img loading="lazy" decoding="async"
             src={cardImage}
             alt={property.imageAlts?.[property.images?.[0]] ?? property.title}
             className="w-full h-full object-cover img-zoom"

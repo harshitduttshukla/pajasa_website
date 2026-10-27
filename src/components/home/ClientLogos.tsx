@@ -17,7 +17,7 @@ export function ClientLogos() {
               key={idx}
               className="p-3 rounded-2xl bg-white border border-[#E8E8E8] hover:border-[#F59A16] transition-all flex items-center justify-center w-28 h-28 shadow-xs hover:shadow-sm"
             >
-              <img
+              <img loading="lazy" decoding="async"
                 src={client.image}
                 alt={`PAJASA Corporate Partner - ${client.name}`}
                 className="max-w-full max-h-full object-contain"
