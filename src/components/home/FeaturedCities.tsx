@@ -30,7 +30,7 @@ export function FeaturedCities() {
                 transition={{ duration: 0.5, delay: idx * 0.08 }}
                 className="group relative h-80 rounded-2xl overflow-hidden shadow-lg border border-slate-200 dark:border-slate-800 hover:shadow-2xl transition-all"
               >
-                <img
+                <img loading="lazy" decoding="async"
                   src={city.image}
                   alt={city.name}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
@@ -76,7 +76,7 @@ export function FeaturedCities() {
                 transition={{ duration: 0.5, delay: idx * 0.08 }}
                 className="group relative h-64 rounded-2xl overflow-hidden shadow-lg border border-slate-200 dark:border-slate-800 hover:shadow-2xl transition-all"
               >
-                <img
+                <img loading="lazy" decoding="async"
                   src={loc.image}
                   alt={loc.name}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"

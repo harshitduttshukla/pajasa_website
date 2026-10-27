@@ -58,7 +58,7 @@ export function PropertyGallery({ images, title, alts }: PropertyGalleryProps) {
                   onClick={() => openLightbox(imageIndex)}
                   className="relative group cursor-pointer overflow-hidden h-full"
                 >
-                  <img
+                  <img loading="lazy" decoding="async"
                     src={img}
                     onError={(e) => {
                       (e.target as HTMLImageElement).src = FALLBACK_IMAGE;

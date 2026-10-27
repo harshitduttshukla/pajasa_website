@@ -88,7 +88,7 @@ export function ReviewsSection({ rating, reviewCount }: ReviewsSectionProps) {
           <div key={rev.id} className="p-6 rounded-2xl bg-white border border-[#E8E8E8] space-y-3 shadow-xs">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-3">
-                <img
+                <img loading="lazy" decoding="async"
                   src={rev.authorAvatar}
                   alt={rev.authorName}
                   className="w-10 h-10 rounded-full object-cover border border-orange-200"

@@ -92,7 +92,7 @@ export function BlogSection() {
               >
                 <div>
                   <div className="h-48 overflow-hidden bg-slate-100">
-                    <img
+                    <img loading="lazy" decoding="async"
                       src={getBlogImageUrl(article.featured_image)}
                       alt={article.title}
                       className="w-full h-full object-cover img-zoom"

@@ -262,7 +262,7 @@ export function Footer() {
             {/* COLUMN 1: PAJASA BRAND & SOCIAL ICONS */}
             <div className="space-y-4">
               <Link href="/" className="inline-block focus-visible:outline-hidden">
-                <img
+                <img loading="lazy" decoding="async"
                   src="https://www.pajasaapartments.com/wp-content/uploads/2024/11/pajasa_apartments.webp"
                   alt="PAJASA Service Apartments"
                   className="h-8 sm:h-9 w-auto object-contain brightness-110"

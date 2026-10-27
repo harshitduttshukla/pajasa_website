@@ -94,7 +94,7 @@ export function StatsAndTestimonial() {
 
               {/* Right Apartment Image Thumbnail */}
               <div className="sm:col-span-5 h-40 sm:h-44 rounded-xl overflow-hidden shadow-xs">
-                <img
+                <img loading="lazy" decoding="async"
                   src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=600&q=80"
                   alt="Serviced Apartment Interior"
                   className="w-full h-full object-cover"

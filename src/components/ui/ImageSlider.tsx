@@ -42,7 +42,7 @@ export function ImageSlider({ images, alt, className = '' }: ImageSliderProps) {
   return (
     <div className={`relative group overflow-hidden ${className}`}>
       {/* Active Image */}
-      <img
+      <img loading="lazy" decoding="async"
         src={imgSrc}
         onError={() => setImgSrc(FALLBACK_IMAGE)}
         alt={`${alt} - photo ${currentIndex + 1}`}

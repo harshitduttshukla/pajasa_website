@@ -45,7 +45,7 @@ export default async function BlogListPage({ searchParams }: BlogListPageProps) 
               className="group rounded-2xl overflow-hidden bg-white border border-[#E8E8E8] shadow-xs hover:shadow-md transition-all flex flex-col"
             >
               <div className="h-48 overflow-hidden bg-slate-100">
-                <img
+                <img loading="lazy" decoding="async"
                   src={getBlogImageUrl(article.featured_image)}
                   alt={article.title}
                   className="w-full h-full object-cover img-zoom"
