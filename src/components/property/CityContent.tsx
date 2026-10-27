@@ -3,7 +3,7 @@ import { BackendCity } from '@/lib/api';
 import { renderWpContent } from '@/lib/wpautop';
 
 // WP Rentals option wp_estate_prop_no
-export const PER_PAGE = 9;
+export const PER_PAGE = 10;
 
 export function Pagination({ basePath, page, totalPages }: { basePath: string; page: number; totalPages: number }) {
   const href = (n: number) => (n === 1 ? basePath : `${basePath}page/${n}/`);

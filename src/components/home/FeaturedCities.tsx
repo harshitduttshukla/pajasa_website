@@ -45,7 +45,7 @@ export function FeaturedCities() {
                 </div>
 
                 <div className="absolute bottom-0 left-0 right-0 p-5 z-10">
-                  <Link href={`/properties?city=${encodeURIComponent(city.name)}`}>
+                  <Link href={`/in/${city.slug}/`}>
                     <h3 className="text-2xl font-bold text-white group-hover:text-amber-400 transition-colors">
                       {city.name}
                     </h3>

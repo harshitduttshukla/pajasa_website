@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { AnimatePresence, motion } from 'framer-motion';
 import { Calendar, ChevronRight, MessageCircle, Phone, X } from 'lucide-react';
 import { CITIES_DATA } from '@/data/mockData';
+import { cityUrl } from '@/lib/utils';
 
 interface MobileNavProps {
   isOpen: boolean;
@@ -105,7 +106,7 @@ export function MobileNav({ isOpen, onClose, onOpenBookingModal }: MobileNavProp
                   {CITIES_DATA.slice(0, 6).map((c) => (
                     <Link
                       key={c.id}
-                      href={`/properties?city=${encodeURIComponent(c.name)}`}
+                      href={cityUrl(c.name)}
                       onClick={onClose}
                       className="p-2 rounded-md bg-slate-50 text-xs font-semibold text-[#3F3F3F] hover:bg-orange-50 hover:text-[#F59A16] border border-[#E8E8E8] truncate"
                     >

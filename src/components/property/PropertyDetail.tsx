@@ -9,7 +9,7 @@ import { PropertyMap } from '@/components/property/PropertyMap';
 import { ReviewsSection } from '@/components/property/ReviewsSection';
 import { PropertyCard } from '@/components/property/PropertyCard';
 import { Property } from '@/types';
-import { formatCurrency } from '@/lib/utils';
+import { cityUrl, formatCurrency } from '@/lib/utils';
 import { fetchPropertyBySlug, fetchProperties, transformBackendProperty, BackendProperty } from '@/lib/api';
 import { renderWpContent } from '@/lib/wpautop';
 import { Bath, Bed, CheckCircle2, ChevronRight, Heart, MapPin, Maximize, Share2, ShieldCheck, Sparkles, Star, UserCheck, Users, Wifi, AlertCircle } from 'lucide-react';
@@ -119,7 +119,7 @@ export function PropertyDetail({ slug, initial }: PropertyDetailProps) {
             <>
           <Link href="/properties" className="hover:text-[#F59A16] transition-colors">Properties</Link>
           <ChevronRight className="w-3.5 h-3.5 text-slate-400" />
-          <Link href={`/properties?city=${encodeURIComponent(property.city)}`} className="hover:text-[#F59A16] transition-colors">
+          <Link href={cityUrl(property.city)} className="hover:text-[#F59A16] transition-colors">
             {property.city}
           </Link>
             </>
