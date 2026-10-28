@@ -61,7 +61,7 @@ export function Header({ onOpenBookingModal }: HeaderProps) {
           {/* Logo Left */}
           <Link href="/" className="flex items-center gap-3 focus-visible:ring-2 focus-visible:ring-[#F59A16] rounded-lg shrink-0">
             <img
-              src="https://www.pajasaapartments.com/wp-content/uploads/2024/11/pajasa_apartments.webp"
+              src="https://dcdza1qr0mu11.cloudfront.net/uploads/wp/2024/11/pajasa_apartments.webp.webp"
               alt="PAJASA Service Apartments"
               className="h-9 sm:h-10 w-auto object-contain"
             />
@@ -119,7 +119,7 @@ export function Header({ onOpenBookingModal }: HeaderProps) {
             {/* Primary Orange BOOK NOW CTA */}
             <button
               onClick={() => onOpenBookingModal?.()}
-              className="px-5 py-2.5 rounded-lg bg-[#F59A16] hover:bg-[#e08a0b] text-white font-bold text-xs uppercase tracking-wider shadow-sm transition-all cursor-pointer transform hover:-translate-y-0.5 active:translate-y-0"
+              className="px-5 py-2.5 rounded-lg bg-[#F59A16] hover:bg-[#e08a0b] text-[#3F3F3F] font-bold text-xs uppercase tracking-wider shadow-sm transition-all cursor-pointer transform hover:-translate-y-0.5 active:translate-y-0"
             >
               BOOK NOW
             </button>
@@ -129,7 +129,7 @@ export function Header({ onOpenBookingModal }: HeaderProps) {
           <div className="flex items-center gap-3 lg:hidden">
             <a
               href="tel:+919811029789"
-              className="p-2 rounded-lg bg-[#F59A16] text-white font-bold text-xs"
+              className="p-2 rounded-lg bg-[#F59A16] text-[#3F3F3F] font-bold text-xs"
               aria-label="Call Helpline"
             >
               <Phone className="w-4 h-4" />

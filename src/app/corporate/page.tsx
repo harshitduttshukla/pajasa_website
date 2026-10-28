@@ -48,7 +48,7 @@ export default function CorporatePage() {
             <div className="w-12 h-12 rounded-xl bg-orange-50 border border-orange-100 flex items-center justify-center">
               <Receipt className="w-6 h-6 text-[#F59A16]" />
             </div>
-            <h3 className="text-lg font-extrabold text-[#3F3F3F]">Centralized Billing & GST Credit</h3>
+            <h2 className="text-lg font-extrabold text-[#3F3F3F]">Centralized Billing & GST Credit</h2>
             <p className="text-xs text-[#666666] leading-relaxed">
               Consolidated monthly invoices with itemized GST breakdown for 100% tax compliance and audit-ready corporate accounting.
             </p>
@@ -58,7 +58,7 @@ export default function CorporatePage() {
             <div className="w-12 h-12 rounded-xl bg-orange-50 border border-orange-100 flex items-center justify-center">
               <UserCheck className="w-6 h-6 text-[#F59A16]" />
             </div>
-            <h3 className="text-lg font-extrabold text-[#3F3F3F]">Dedicated Key Account Manager</h3>
+            <h2 className="text-lg font-extrabold text-[#3F3F3F]">Dedicated Key Account Manager</h2>
             <p className="text-xs text-[#666666] leading-relaxed">
               Single point of contact for employee check-ins, custom meal plans, special transit requests, and emergency support.
             </p>
@@ -68,7 +68,7 @@ export default function CorporatePage() {
             <div className="w-12 h-12 rounded-xl bg-orange-50 border border-orange-100 flex items-center justify-center">
               <Award className="w-6 h-6 text-[#F59A16]" />
             </div>
-            <h3 className="text-lg font-extrabold text-[#3F3F3F]">Negotiated Long-Stay Discounts</h3>
+            <h2 className="text-lg font-extrabold text-[#3F3F3F]">Negotiated Long-Stay Discounts</h2>
             <p className="text-xs text-[#666666] leading-relaxed">
               Enjoy volume corporate discounts of up to 35% on stays exceeding 15 days across 18 major metro business hubs.
             </p>
@@ -78,14 +78,14 @@ export default function CorporatePage() {
         {/* Enterprise Contact Form */}
         <div className="p-6 sm:p-10 rounded-2xl bg-white border border-[#E8E8E8] max-w-3xl mx-auto space-y-6 shadow-xs">
           <div className="text-center space-y-1">
-            <h3 className="text-xl sm:text-2xl font-extrabold text-[#3F3F3F]">Request an Enterprise Corporate Agreement</h3>
+            <h2 className="text-xl sm:text-2xl font-extrabold text-[#3F3F3F]">Request an Enterprise Corporate Agreement</h2>
             <p className="text-xs text-[#666666]">Fill out your company details to receive custom corporate rates within 2 hours.</p>
           </div>
 
           {submitted ? (
             <div className="p-6 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-700 text-center space-y-2 font-bold">
-              <CheckCircle2 className="w-8 h-8 mx-auto text-emerald-600" />
-              <h4 className="font-extrabold text-base">Corporate Request Submitted!</h4>
+              <CheckCircle2 className="w-8 h-8 mx-auto text-emerald-700" />
+              <h3 className="font-extrabold text-base">Corporate Request Submitted!</h3>
               <p className="text-xs text-emerald-800">An Enterprise Solutions Director will contact your HR/Admin team shortly.</p>
             </div>
           ) : (
@@ -149,7 +149,7 @@ export default function CorporatePage() {
 
               <button
                 type="submit"
-                className="w-full py-4 rounded-xl bg-[#F59A16] hover:bg-[#e08a0b] text-white font-extrabold text-xs uppercase tracking-wider shadow-md transition-all cursor-pointer"
+                className="w-full py-4 rounded-xl bg-[#F59A16] hover:bg-[#e08a0b] text-[#3F3F3F] font-extrabold text-xs uppercase tracking-wider shadow-md transition-all cursor-pointer"
               >
                 Submit Corporate Partnership Request
               </button>

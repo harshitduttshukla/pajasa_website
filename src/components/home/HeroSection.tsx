@@ -42,7 +42,7 @@ export function HeroSection() {
             <div className="pt-2">
               <Link
                 href="/properties"
-                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-[#F59A16] hover:bg-[#e08a0b] text-white font-bold text-xs uppercase tracking-wider shadow-md transition-all transform hover:-translate-y-0.5"
+                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-[#F59A16] hover:bg-[#e08a0b] text-[#3F3F3F] font-bold text-xs uppercase tracking-wider shadow-md transition-all transform hover:-translate-y-0.5"
               >
                 <span>EXPLORE APARTMENTS</span>
                 <ArrowRight className="w-4 h-4" />

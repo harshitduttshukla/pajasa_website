@@ -15,7 +15,7 @@ export function Pagination({ basePath, page, totalPages }: { basePath: string; p
           key={n}
           href={href(n)}
           aria-current={n === page ? 'page' : undefined}
-          className={`px-3 py-1.5 rounded-lg border text-xs font-bold ${n === page ? 'bg-[#F59A16] border-[#F59A16] text-white' : 'bg-white border-[#E8E8E8] hover:text-[#F59A16]'}`}
+          className={`px-3 py-1.5 rounded-lg border text-xs font-bold ${n === page ? 'bg-[#F59A16] border-[#F59A16] text-[#3F3F3F]' : 'bg-white border-[#E8E8E8] hover:text-[#F59A16]'}`}
         >
           {n}
         </Link>

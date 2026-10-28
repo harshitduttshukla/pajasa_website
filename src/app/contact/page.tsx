@@ -46,7 +46,7 @@ export default function ContactPage() {
           {/* Left Column: Direct Contacts */}
           <div className="lg:col-span-5 space-y-6">
             <div className="p-6 rounded-2xl bg-white border border-[#E8E8E8] space-y-4 shadow-xs">
-              <h3 className="text-base font-extrabold text-[#3F3F3F] border-b border-[#E8E8E8] pb-3">Corporate Headquarters</h3>
+              <h2 className="text-base font-extrabold text-[#3F3F3F] border-b border-[#E8E8E8] pb-3">Corporate Headquarters</h2>
               
               <div className="space-y-4 text-xs">
                 <div className="flex items-start gap-3">
@@ -66,10 +66,10 @@ export default function ContactPage() {
                 </div>
 
                 <div className="flex items-center gap-3">
-                  <MessageCircle className="w-5 h-5 text-emerald-600 shrink-0" />
+                  <MessageCircle className="w-5 h-5 text-emerald-700 shrink-0" />
                   <div>
                     <span className="font-extrabold text-[#3F3F3F] block">WhatsApp Concierge</span>
-                    <a href="https://api.whatsapp.com/send?phone=919811029789" target="_blank" rel="noopener noreferrer" className="text-emerald-600 font-bold hover:underline">
+                    <a href="https://api.whatsapp.com/send?phone=919811029789" target="_blank" rel="noopener noreferrer" className="text-emerald-700 font-bold hover:underline">
                       Chat Now (+91 98110 29789)
                     </a>
                   </div>
@@ -87,7 +87,7 @@ export default function ContactPage() {
 
             {/* Regional Hub Offices */}
             <div className="p-6 rounded-2xl bg-white border border-[#E8E8E8] space-y-3 text-xs shadow-xs">
-              <h4 className="font-extrabold text-[#F59A16] uppercase tracking-wider">Regional Business Hubs</h4>
+              <h3 className="font-extrabold text-[#F59A16] uppercase tracking-wider">Regional Business Hubs</h3>
               <ul className="space-y-2 text-[#666666]">
                 <li>• <strong>Gurugram:</strong> Cyber City & Golf Course Road Corridor</li>
                 <li>• <strong>Mumbai:</strong> Powai, BKC & Lower Parel Business Hubs</li>
@@ -98,11 +98,11 @@ export default function ContactPage() {
 
           {/* Right Column: Contact Form */}
           <div className="lg:col-span-7 p-6 sm:p-8 rounded-2xl bg-white border border-[#E8E8E8] space-y-6 shadow-xs">
-            <h3 className="text-xl font-extrabold text-[#3F3F3F]">Send Us a Direct Message</h3>
+            <h2 className="text-xl font-extrabold text-[#3F3F3F]">Send Us a Direct Message</h2>
 
             {submitted ? (
               <div className="p-6 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs flex items-center gap-3 font-bold">
-                <CheckCircle2 className="w-6 h-6 shrink-0 text-emerald-600" />
+                <CheckCircle2 className="w-6 h-6 shrink-0 text-emerald-700" />
                 <span>Message delivered! Our corporate concierge will respond to your email within 30 minutes.</span>
               </div>
             ) : (
@@ -171,7 +171,7 @@ export default function ContactPage() {
 
                 <button
                   type="submit"
-                  className="py-3.5 px-6 rounded-xl bg-[#F59A16] hover:bg-[#e08a0b] text-white font-extrabold text-xs uppercase tracking-wider shadow-md transition-all flex items-center justify-center gap-2 cursor-pointer"
+                  className="py-3.5 px-6 rounded-xl bg-[#F59A16] hover:bg-[#e08a0b] text-[#3F3F3F] font-extrabold text-xs uppercase tracking-wider shadow-md transition-all flex items-center justify-center gap-2 cursor-pointer"
                 >
                   <Send className="w-4 h-4" />
                   <span>Send Message</span>

@@ -44,7 +44,7 @@ export function TrendingDestinations() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
 
               <div className="absolute top-4 left-4 z-10">
-                <span className="px-3 py-1 rounded-md bg-[#F59A16] text-white text-[10px] font-extrabold flex items-center gap-1">
+                <span className="px-3 py-1 rounded-md bg-[#F59A16] text-[#3F3F3F] text-[10px] font-extrabold flex items-center gap-1">
                   <Building className="w-3.5 h-3.5" />
                   {city.propertyCount} Stays
                 </span>

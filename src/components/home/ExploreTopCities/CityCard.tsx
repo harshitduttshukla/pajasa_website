@@ -23,7 +23,7 @@ export function CityCard({ city }: CityCardProps) {
     if (!hasError) {
       setHasError(true);
       // High-reliability PAJASA fallback
-      setImgSrc('https://www.pajasaapartments.com/wp-content/uploads/2025/05/Service-Apartment-in-Mumbai-by-PAJASA-1170x921.webp');
+      setImgSrc('https://dcdza1qr0mu11.cloudfront.net/uploads/wp/2025/05/Service-Apartment-in-Mumbai-by-PAJASA-1170x921.webp.webp');
     }
   };
 
@@ -57,7 +57,7 @@ export function CityCard({ city }: CityCardProps) {
       {/* Bottom Content Area */}
       <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-5 z-10 space-y-1">
         <h3
-          className="text-lg sm:text-xl font-black !text-white tracking-tight drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] group-hover:!text-amber-300 transition-colors duration-200"
+          className="text-lg sm:text-xl font-black !text-white tracking-tight drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] group-hover:!text-[#F59A16] transition-colors duration-200"
           style={{ color: '#ffffff' }}
         >
           {city.name}
@@ -67,7 +67,7 @@ export function CityCard({ city }: CityCardProps) {
           className="flex items-center gap-1.5 text-xs !text-slate-200 font-semibold drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]"
           style={{ color: '#e2e8f0' }}
         >
-          <Building2 className="w-3.5 h-3.5 text-amber-400 shrink-0" />
+          <Building2 className="w-3.5 h-3.5 text-[#F59A16] shrink-0" />
           <span>{city.propertyCount} properties</span>
         </div>
       </div>

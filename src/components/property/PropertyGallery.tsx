@@ -71,7 +71,7 @@ export function PropertyGallery({ images, title, alts }: PropertyGalleryProps) {
                   {/* "+N More" Overlay on 4th thumbnail */}
                   {isLastVisible && extraCount > 0 && (
                     <div className="absolute inset-0 bg-slate-950/75 backdrop-blur-xs flex flex-col items-center justify-center text-white font-extrabold text-lg">
-                      <ImageIcon className="w-6 h-6 text-amber-400 mb-1" />
+                      <ImageIcon className="w-6 h-6 text-[#F59A16] mb-1" />
                       <span>+{extraCount} More</span>
                     </div>
                   )}
@@ -87,7 +87,7 @@ export function PropertyGallery({ images, title, alts }: PropertyGalleryProps) {
           onClick={() => openLightbox(0)}
           className="absolute bottom-4 right-4 z-10 px-4 py-2.5 rounded-2xl bg-slate-950/85 hover:bg-slate-950 text-white font-extrabold text-xs flex items-center gap-2 border border-white/20 shadow-xl transition-all transform hover:scale-105 cursor-pointer"
         >
-          <Grid className="w-4 h-4 text-amber-400" />
+          <Grid className="w-4 h-4 text-[#F59A16]" />
           <span>View All {displayImages.length} Photos</span>
         </button>
       </div>

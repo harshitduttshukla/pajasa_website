@@ -166,9 +166,9 @@ export function Footer() {
         {/* Directory Content Area */}
         <div className="pt-6">
           {/* Subheading indicating current category */}
-          <h4 className="text-xs sm:text-sm font-bold text-zinc-200 mb-5 tracking-tight">
+          <h2 className="text-xs sm:text-sm font-bold text-zinc-200 mb-5 tracking-tight">
             {TABS.find((t) => t.id === activeTab)?.heading}
-          </h4>
+          </h2>
 
           {/* TAB 1: FOR GUESTS / CITIES */}
           {activeTab === 'guests' && (
@@ -263,7 +263,7 @@ export function Footer() {
             <div className="space-y-4">
               <Link href="/" className="inline-block focus-visible:outline-hidden">
                 <img loading="lazy" decoding="async"
-                  src="https://www.pajasaapartments.com/wp-content/uploads/2024/11/pajasa_apartments.webp"
+                  src="https://dcdza1qr0mu11.cloudfront.net/uploads/wp/2024/11/pajasa_apartments.webp.webp"
                   alt="PAJASA Service Apartments"
                   className="h-8 sm:h-9 w-auto object-contain brightness-110"
                 />
@@ -355,9 +355,9 @@ export function Footer() {
 
             {/* COLUMN 2: COMPANY */}
             <div className="space-y-3">
-              <h5 className="text-xs font-extrabold uppercase text-white tracking-wider">
+              <h3 className="text-xs font-extrabold uppercase text-white tracking-wider">
                 Company
-              </h5>
+              </h3>
               <ul className="space-y-2 text-xs text-zinc-400">
                 <li>
                   <Link href="/corporate" className="hover:text-[#F59A16] transition-colors block">
@@ -404,9 +404,9 @@ export function Footer() {
 
             {/* COLUMN 3: SERVICES & EXPLORE */}
             <div className="space-y-3">
-              <h5 className="text-xs font-extrabold uppercase text-white tracking-wider">
+              <h3 className="text-xs font-extrabold uppercase text-white tracking-wider">
                 Services & Explore
-              </h5>
+              </h3>
               <ul className="space-y-2 text-xs text-zinc-400">
                 <li>
                   <Link href="/properties" className="hover:text-[#F59A16] transition-colors block">
@@ -448,9 +448,9 @@ export function Footer() {
 
             {/* COLUMN 4: DIRECT DESK CONTACT & OFFICES */}
             <div className="space-y-4">
-              <h5 className="text-xs font-extrabold uppercase text-white tracking-wider">
+              <h3 className="text-xs font-extrabold uppercase text-white tracking-wider">
                 Direct Desk Contact
-              </h5>
+              </h3>
               
               <ul className="space-y-2.5 text-xs text-zinc-400">
                 <li className="flex items-center gap-2.5">

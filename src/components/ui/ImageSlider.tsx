@@ -82,7 +82,7 @@ export function ImageSlider({ images, alt, className = '' }: ImageSliderProps) {
                   setImgSrc(images[idx] || FALLBACK_IMAGE);
                 }}
                 className={`h-1.5 rounded-full transition-all ${
-                  idx === currentIndex ? 'w-4 bg-amber-400' : 'w-1.5 bg-white/60 hover:bg-white'
+                  idx === currentIndex ? 'w-4 bg-[#F59A16]' : 'w-1.5 bg-white/60 hover:bg-white'
                 }`}
                 aria-label={`Go to slide ${idx + 1}`}
               />
