@@ -143,9 +143,9 @@ export function LocationListing({ countryCode: rawCountryCode, slug, city, initi
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Banner */}
         {city ? (
-          <h2 className="mb-8 text-3xl sm:text-4xl font-extrabold text-[#3F3F3F] tracking-tight">
+          <h1 className="mb-8 text-3xl sm:text-4xl font-extrabold text-[#3F3F3F] tracking-tight">
             Luxury Service Apartments in {city.name}
-          </h2>
+          </h1>
         ) : (
         <div className="mb-8 space-y-2">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-orange-50 border border-orange-200 text-[#F59A16] text-xs font-extrabold uppercase tracking-wider">
@@ -207,7 +207,7 @@ export function LocationListing({ countryCode: rawCountryCode, slug, city, initi
                 <div className="flex items-center justify-center gap-3 pt-2">
                   <button
                     onClick={handleReset}
-                    className="px-4 py-2.5 rounded-xl bg-[#F59A16] hover:bg-[#e08a0b] text-white font-extrabold text-xs shadow-xs cursor-pointer"
+                    className="px-4 py-2.5 rounded-xl bg-[#F59A16] hover:bg-[#e08a0b] text-[#3F3F3F] font-extrabold text-xs shadow-xs cursor-pointer"
                   >
                     Browse All Serviced Stays
                   </button>

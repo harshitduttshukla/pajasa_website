@@ -77,7 +77,7 @@ export default function BlogDetailPage({ params }: BlogDetailPageProps) {
           </p>
           <Link
             href="/"
-            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#F59A16] hover:bg-[#e08a0b] text-white text-xs font-bold shadow-xs transition-colors"
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#F59A16] hover:bg-[#e08a0b] text-[#3F3F3F] text-xs font-bold shadow-xs transition-colors"
           >
             <ArrowLeft className="w-3.5 h-3.5" />
             <span>Return to Home</span>
@@ -94,9 +94,9 @@ export default function BlogDetailPage({ params }: BlogDetailPageProps) {
         {/* Breadcrumb Trail */}
         <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs text-[#666666] font-semibold pt-2">
           <Link href="/" className="hover:text-[#F59A16] transition-colors">Home</Link>
-          <ChevronRight className="w-3.5 h-3.5 text-slate-400" />
+          <ChevronRight className="w-3.5 h-3.5 text-slate-500" />
           <Link href="/#blog" className="hover:text-[#F59A16] transition-colors">Blog</Link>
-          <ChevronRight className="w-3.5 h-3.5 text-slate-400" />
+          <ChevronRight className="w-3.5 h-3.5 text-slate-500" />
           <span className="text-[#3F3F3F] truncate font-extrabold">{article.title}</span>
         </nav>
 
@@ -120,13 +120,13 @@ export default function BlogDetailPage({ params }: BlogDetailPageProps) {
             </div>
             {article.author && (
               <div className="flex items-center gap-1.5">
-                <User className="w-4 h-4 text-slate-400" />
+                <User className="w-4 h-4 text-slate-500" />
                 <span>By {article.author}</span>
               </div>
             )}
             {article.reading_time && (
               <div className="flex items-center gap-1.5">
-                <Clock className="w-4 h-4 text-slate-400" />
+                <Clock className="w-4 h-4 text-slate-500" />
                 <span>{article.reading_time}</span>
               </div>
             )}

@@ -52,6 +52,7 @@ export function CorporateHousingCalc() {
               </div>
               <input
                 type="range"
+                aria-label="Number of executives"
                 min={1}
                 max={50}
                 value={employees}
@@ -68,6 +69,7 @@ export function CorporateHousingCalc() {
               </div>
               <input
                 type="range"
+                aria-label="Stay duration in days"
                 min={5}
                 max={180}
                 step={5}
@@ -79,11 +81,11 @@ export function CorporateHousingCalc() {
 
             <div className="p-4 rounded-xl bg-orange-50/50 border border-orange-100 text-xs space-y-2 text-[#3F3F3F]">
               <div className="flex items-center gap-2 font-medium">
-                <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
+                <CheckCircle2 className="w-4 h-4 text-emerald-700 shrink-0" />
                 <span>Single Caretaker Security (WHO Sanitation Compliant)</span>
               </div>
               <div className="flex items-center gap-2 font-medium">
-                <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
+                <CheckCircle2 className="w-4 h-4 text-emerald-700 shrink-0" />
                 <span>100% Tax Deductible GST B2B Invoice SLA</span>
               </div>
             </div>
@@ -114,7 +116,7 @@ export function CorporateHousingCalc() {
 
             <a
               href="tel:+919811029789"
-              className="w-full py-3.5 px-6 rounded-xl bg-[#F59A16] hover:bg-[#e08a0b] text-white font-extrabold text-xs shadow-md transition-all text-center block uppercase tracking-wider cursor-pointer"
+              className="w-full py-3.5 px-6 rounded-xl bg-[#F59A16] hover:bg-[#e08a0b] text-[#3F3F3F] font-extrabold text-xs shadow-md transition-all text-center block uppercase tracking-wider cursor-pointer"
             >
               Request Corporate Travel Desk SLA
             </a>

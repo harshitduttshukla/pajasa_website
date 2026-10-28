@@ -155,7 +155,7 @@ function CatalogContent() {
                 <p className="text-xs text-[#666666] max-w-sm mx-auto">Please check your connection or try again.</p>
                 <button
                   onClick={() => window.location.reload()}
-                  className="px-4 py-2.5 rounded-xl bg-[#F59A16] hover:bg-[#e08a0b] text-white font-extrabold text-xs shadow-xs cursor-pointer"
+                  className="px-4 py-2.5 rounded-xl bg-[#F59A16] hover:bg-[#e08a0b] text-[#3F3F3F] font-extrabold text-xs shadow-xs cursor-pointer"
                 >
                   Retry
                 </button>
@@ -169,7 +169,7 @@ function CatalogContent() {
                 </p>
                 <button
                   onClick={handleReset}
-                  className="px-4 py-2.5 rounded-xl bg-[#F59A16] hover:bg-[#e08a0b] text-white font-extrabold text-xs shadow-xs cursor-pointer"
+                  className="px-4 py-2.5 rounded-xl bg-[#F59A16] hover:bg-[#e08a0b] text-[#3F3F3F] font-extrabold text-xs shadow-xs cursor-pointer"
                 >
                   Reset All Filters
                 </button>
@@ -203,7 +203,7 @@ function CatalogContent() {
 
 export default function PropertiesPage() {
   return (
-    <Suspense fallback={<div className="pt-32 text-center text-slate-400 text-sm font-semibold">Loading properties catalog...</div>}>
+    <Suspense fallback={<div className="pt-32 text-center text-slate-500 text-sm font-semibold">Loading properties catalog...</div>}>
       <CatalogContent />
     </Suspense>
   );

@@ -64,7 +64,7 @@ export function BookingModal({ isOpen, onClose, selectedProperty }: BookingModal
             {/* Close Button */}
             <button
               onClick={onClose}
-              className="absolute top-5 right-5 p-2 rounded-full text-slate-400 hover:text-[#3F3F3F] hover:bg-slate-100 transition-colors cursor-pointer"
+              className="absolute top-5 right-5 p-2 rounded-full text-slate-500 hover:text-[#3F3F3F] hover:bg-slate-100 transition-colors cursor-pointer"
               aria-label="Close Booking Window"
             >
               <X className="w-5 h-5" />
@@ -72,7 +72,7 @@ export function BookingModal({ isOpen, onClose, selectedProperty }: BookingModal
 
             {submitted ? (
               <div className="py-10 text-center space-y-4">
-                <div className="w-16 h-16 rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center mx-auto border border-emerald-200">
+                <div className="w-16 h-16 rounded-full bg-emerald-50 text-emerald-700 flex items-center justify-center mx-auto border border-emerald-200">
                   <CheckCircle2 className="w-10 h-10" />
                 </div>
                 <h3 className="text-xl font-extrabold text-[#3F3F3F]">Inquiry Received & Confirmed</h3>
@@ -102,7 +102,7 @@ export function BookingModal({ isOpen, onClose, selectedProperty }: BookingModal
                     <div>
                       <label htmlFor="modal-name" className="block font-bold mb-1">Full Name *</label>
                       <div className="relative">
-                        <User className="w-4 h-4 text-slate-400 absolute left-3 top-3" />
+                        <User className="w-4 h-4 text-slate-500 absolute left-3 top-3" />
                         <input
                           id="modal-name"
                           type="text"
@@ -117,7 +117,7 @@ export function BookingModal({ isOpen, onClose, selectedProperty }: BookingModal
                     <div>
                       <label htmlFor="modal-email" className="block font-bold mb-1">Corporate Email *</label>
                       <div className="relative">
-                        <Mail className="w-4 h-4 text-slate-400 absolute left-3 top-3" />
+                        <Mail className="w-4 h-4 text-slate-500 absolute left-3 top-3" />
                         <input
                           id="modal-email"
                           type="email"
@@ -134,7 +134,7 @@ export function BookingModal({ isOpen, onClose, selectedProperty }: BookingModal
                     <div>
                       <label htmlFor="modal-phone" className="block font-bold mb-1">Phone Number *</label>
                       <div className="relative">
-                        <Phone className="w-4 h-4 text-slate-400 absolute left-3 top-3" />
+                        <Phone className="w-4 h-4 text-slate-500 absolute left-3 top-3" />
                         <input
                           id="modal-phone"
                           type="tel"
@@ -211,7 +211,7 @@ export function BookingModal({ isOpen, onClose, selectedProperty }: BookingModal
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full py-3.5 px-6 rounded-xl bg-[#F59A16] hover:bg-[#e08a0b] text-white font-extrabold text-xs uppercase tracking-wider shadow-md transition-all flex items-center justify-center gap-2 cursor-pointer"
+                    className="w-full py-3.5 px-6 rounded-xl bg-[#F59A16] hover:bg-[#e08a0b] text-[#3F3F3F] font-extrabold text-xs uppercase tracking-wider shadow-md transition-all flex items-center justify-center gap-2 cursor-pointer"
                   >
                     <Calendar className="w-4 h-4" />
                     <span>Reserve Corporate Stay</span>

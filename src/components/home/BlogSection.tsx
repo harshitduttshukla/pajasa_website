@@ -103,7 +103,7 @@ export function BlogSection() {
                     <div className="flex items-center justify-between text-[11px] text-[#F59A16] font-extrabold">
                       <span>{formatDate(article.created_at)}</span>
                       {article.category && (
-                        <span className="text-slate-400 font-semibold">{article.category}</span>
+                        <span className="text-slate-500 font-semibold">{article.category}</span>
                       )}
                     </div>
                     <h3 className="text-base font-extrabold text-[#3F3F3F] group-hover:text-[#F59A16] transition-colors line-clamp-2">

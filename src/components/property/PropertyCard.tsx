@@ -40,7 +40,7 @@ export function PropertyCard({ property, badgeText, onBookNow }: PropertyCardPro
 
           {/* Category Badge Top Left */}
           <div className="absolute top-3 left-3 z-10 pointer-events-none">
-            <span className="px-3 py-1 rounded-md bg-[#F59A16] text-white text-[10px] font-extrabold tracking-wider uppercase shadow-xs">
+            <span className="px-3 py-1 rounded-md bg-[#F59A16] text-[#3F3F3F] text-[10px] font-extrabold tracking-wider uppercase shadow-xs">
               {defaultBadge}
             </span>
           </div>
@@ -69,7 +69,7 @@ export function PropertyCard({ property, badgeText, onBookNow }: PropertyCardPro
 
           {/* Location */}
           <div className="flex items-center gap-1 text-xs text-[#666666] font-medium">
-            <MapPin className="w-3.5 h-3.5 text-slate-400 shrink-0" strokeWidth={1.5} />
+            <MapPin className="w-3.5 h-3.5 text-slate-500 shrink-0" strokeWidth={1.5} />
             <span className="truncate">
               {property.locality && property.locality !== property.city ? `${property.locality}, ` : ''}{property.city}
             </span>
@@ -89,17 +89,17 @@ export function PropertyCard({ property, badgeText, onBookNow }: PropertyCardPro
       {/* Footer Specs Line */}
       <div className="px-4 py-3 border-t border-[#E8E8E8] bg-[#FAFAF8]/50 flex items-center justify-between text-xs text-[#666666] font-semibold">
         <span className="flex items-center gap-1.5">
-          <Bed className="w-3.5 h-3.5 text-slate-400" strokeWidth={1.5} />
+          <Bed className="w-3.5 h-3.5 text-slate-500" strokeWidth={1.5} />
           {property.bedrooms} Bed
         </span>
         <span className="text-slate-300">|</span>
         <span className="flex items-center gap-1.5">
-          <Bath className="w-3.5 h-3.5 text-slate-400" strokeWidth={1.5} />
+          <Bath className="w-3.5 h-3.5 text-slate-500" strokeWidth={1.5} />
           {property.bathrooms} Bath
         </span>
         <span className="text-slate-300">|</span>
         <span className="flex items-center gap-1.5">
-          <Users className="w-3.5 h-3.5 text-slate-400" strokeWidth={1.5} />
+          <Users className="w-3.5 h-3.5 text-slate-500" strokeWidth={1.5} />
           {property.maxGuests} Guests
         </span>
       </div>

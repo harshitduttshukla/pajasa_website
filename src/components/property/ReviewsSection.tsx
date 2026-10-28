@@ -110,7 +110,7 @@ export function ReviewsSection({ rating, reviewCount }: ReviewsSectionProps) {
               &quot;{rev.comment}&quot;
             </p>
 
-            <div className="text-[11px] text-slate-400 flex items-center justify-between font-medium">
+            <div className="text-[11px] text-slate-500 flex items-center justify-between font-medium">
               <span>{rev.stayType}</span>
               <span>{rev.date}</span>
             </div>
@@ -127,7 +127,7 @@ export function ReviewsSection({ rating, reviewCount }: ReviewsSectionProps) {
 
         {reviewSubmitted ? (
           <div className="p-4 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs flex items-center gap-2 font-bold">
-            <CheckCircle2 className="w-5 h-5 text-emerald-600" />
+            <CheckCircle2 className="w-5 h-5 text-emerald-700" />
             <span>Thank you! Your verified review has been published.</span>
           </div>
         ) : (
@@ -169,7 +169,7 @@ export function ReviewsSection({ rating, reviewCount }: ReviewsSectionProps) {
 
             <button
               type="submit"
-              className="py-2.5 px-5 rounded-xl bg-[#F59A16] hover:bg-[#e08a0b] text-white font-extrabold text-xs shadow-xs transition-all flex items-center gap-2 cursor-pointer uppercase tracking-wider"
+              className="py-2.5 px-5 rounded-xl bg-[#F59A16] hover:bg-[#e08a0b] text-[#3F3F3F] font-extrabold text-xs shadow-xs transition-all flex items-center gap-2 cursor-pointer uppercase tracking-wider"
             >
               <Send className="w-3.5 h-3.5" />
               <span>Submit Review</span>

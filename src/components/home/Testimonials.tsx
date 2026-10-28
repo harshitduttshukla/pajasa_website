@@ -12,14 +12,14 @@ export function Testimonials() {
         
         {/* Header */}
         <div className="text-center max-w-2xl mx-auto space-y-3 mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400 text-xs font-bold uppercase tracking-wider">
-            <Quote className="w-4 h-4 text-amber-400" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#F59A16]/10 border border-[#F59A16]/20 text-[#F59A16] text-xs font-bold uppercase tracking-wider">
+            <Quote className="w-4 h-4 text-[#F59A16]" />
             <span>Executive Feedback</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight">
             What Corporate <span className="gold-gradient-text">Leaders Say</span>
           </h2>
-          <p className="text-sm text-slate-400">
+          <p className="text-sm text-slate-500">
             Hear from corporate travel heads, tech founders, and visiting leaders who make Aura their home during business trips.
           </p>
         </div>
@@ -33,13 +33,13 @@ export function Testimonials() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: idx * 0.1 }}
-              className="p-8 rounded-3xl bg-slate-900 border border-slate-800 hover:border-amber-500/30 transition-all shadow-xl flex flex-col justify-between"
+              className="p-8 rounded-3xl bg-slate-900 border border-slate-800 hover:border-[#F59A16]/30 transition-all shadow-xl flex flex-col justify-between"
             >
               <div className="space-y-4">
                 {/* Rating Stars */}
                 <div className="flex items-center gap-1">
                   {[...Array(review.rating)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
+                    <Star key={i} className="w-4 h-4 fill-[#F59A16] text-[#F59A16]" />
                   ))}
                 </div>
 
@@ -53,11 +53,11 @@ export function Testimonials() {
                 <img loading="lazy" decoding="async"
                   src={review.authorAvatar}
                   alt={review.authorName}
-                  className="w-11 h-11 rounded-full object-cover border border-amber-500/40"
+                  className="w-11 h-11 rounded-full object-cover border border-[#F59A16]/40"
                 />
                 <div>
-                  <h4 className="text-sm font-bold text-white">{review.authorName}</h4>
-                  <p className="text-[11px] text-amber-400 font-medium">{review.authorCompany}</p>
+                  <h3 className="text-sm font-bold text-white">{review.authorName}</h3>
+                  <p className="text-[11px] text-[#F59A16] font-medium">{review.authorCompany}</p>
                   <span className="text-[10px] text-slate-500 block">{review.stayType}</span>
                 </div>
               </div>

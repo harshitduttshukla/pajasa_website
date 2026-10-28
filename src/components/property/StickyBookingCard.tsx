@@ -73,7 +73,7 @@ export function StickyBookingCard({ property }: StickyBookingCardProps) {
           </div>
           <a
             href="tel:+919811029789"
-            className="p-2.5 rounded-full bg-[#F59A16] text-white hover:bg-[#e08a0b] transition-all cursor-pointer shadow-xs"
+            className="p-2.5 rounded-full bg-[#F59A16] text-[#3F3F3F] hover:bg-[#e08a0b] transition-all cursor-pointer shadow-xs"
             aria-label="Call Concierge Manager"
             title="Call Manager"
           >
@@ -88,7 +88,7 @@ export function StickyBookingCard({ property }: StickyBookingCardProps) {
               <span className="text-2xl font-extrabold text-[#F59A16]">{formatCurrency(property.pricePerNight)}</span>
               <span className="text-xs text-[#666666] font-medium"> / night</span>
             </div>
-            <p className="text-[11px] text-emerald-600 font-extrabold">
+            <p className="text-[11px] text-emerald-700 font-extrabold">
               Monthly Rate: {formatCurrency(property.pricePerMonth)}
             </p>
           </div>
@@ -101,7 +101,7 @@ export function StickyBookingCard({ property }: StickyBookingCardProps) {
 
         {submitted ? (
           <div className="py-8 text-center space-y-3">
-            <div className="w-14 h-14 rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center mx-auto border border-emerald-200">
+            <div className="w-14 h-14 rounded-full bg-emerald-50 text-emerald-700 flex items-center justify-center mx-auto border border-emerald-200">
               <CheckCircle2 className="w-8 h-8" />
             </div>
             <h4 className="text-base font-extrabold text-[#3F3F3F]">Quote Inquiry Sent!</h4>
@@ -115,9 +115,10 @@ export function StickyBookingCard({ property }: StickyBookingCardProps) {
             <div className="p-3 rounded-xl bg-orange-50/50 border border-orange-100 flex items-center justify-between">
               <div className="flex items-center gap-2">
                 <Sparkles className="w-4 h-4 text-[#F59A16]" />
-                <span className="font-extrabold text-[#3F3F3F]">100% GST Tax Credit</span>
+                <label htmlFor="booking-gst" className="font-extrabold text-[#3F3F3F] cursor-pointer">100% GST Tax Credit</label>
               </div>
               <input
+                id="booking-gst"
                 type="checkbox"
                 checked={isCorporate}
                 onChange={(e) => setIsCorporate(e.target.checked)}
@@ -127,16 +128,18 @@ export function StickyBookingCard({ property }: StickyBookingCardProps) {
 
             <div className="grid grid-cols-2 gap-3">
               <div>
-                <label className="block text-[#3F3F3F] font-bold mb-1">Check-in</label>
+                <label htmlFor="booking-check-in" className="block text-[#3F3F3F] font-bold mb-1">Check-in</label>
                 <input
+                  id="booking-check-in"
                   type="date"
                   {...register('checkIn')}
                   className="w-full py-2 px-3 rounded-xl bg-slate-50 border border-[#E8E8E8] text-[#3F3F3F] focus:outline-none focus:border-[#F59A16] cursor-pointer"
                 />
               </div>
               <div>
-                <label className="block text-[#3F3F3F] font-bold mb-1">Check-out</label>
+                <label htmlFor="booking-check-out" className="block text-[#3F3F3F] font-bold mb-1">Check-out</label>
                 <input
+                  id="booking-check-out"
                   type="date"
                   {...register('checkOut')}
                   className="w-full py-2 px-3 rounded-xl bg-slate-50 border border-[#E8E8E8] text-[#3F3F3F] focus:outline-none focus:border-[#F59A16] cursor-pointer"
@@ -187,7 +190,7 @@ export function StickyBookingCard({ property }: StickyBookingCardProps) {
               </div>
 
               {corporateDiscount > 0 && (
-                <div className="flex items-center justify-between text-emerald-600 font-extrabold">
+                <div className="flex items-center justify-between text-emerald-700 font-extrabold">
                   <span>Corporate Discount</span>
                   <span>-{formatCurrency(corporateDiscount)}</span>
                 </div>
@@ -207,7 +210,7 @@ export function StickyBookingCard({ property }: StickyBookingCardProps) {
             {/* Primary Action Button */}
             <button
               type="submit"
-              className="w-full py-3.5 px-4 rounded-xl bg-[#F59A16] hover:bg-[#e08a0b] text-white font-extrabold text-xs uppercase tracking-wider shadow-md transition-all flex items-center justify-center gap-2 cursor-pointer transform hover:-translate-y-0.5"
+              className="w-full py-3.5 px-4 rounded-xl bg-[#F59A16] hover:bg-[#e08a0b] text-[#3F3F3F] font-extrabold text-xs uppercase tracking-wider shadow-md transition-all flex items-center justify-center gap-2 cursor-pointer transform hover:-translate-y-0.5"
             >
               <Calendar className="w-4 h-4" />
               <span>Reserve Corporate Stay</span>
@@ -246,7 +249,7 @@ export function StickyBookingCard({ property }: StickyBookingCardProps) {
       <div className="fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-t border-[#E8E8E8] p-3.5 lg:hidden flex items-center justify-between gap-3 shadow-lg">
         <div>
           <div className="text-xs text-slate-500">Starting from</div>
-          <div className="text-lg font-extrabold text-[#F59A16]">{formatCurrency(property.pricePerNight)}<span className="text-xs text-slate-400">/night</span></div>
+          <div className="text-lg font-extrabold text-[#F59A16]">{formatCurrency(property.pricePerNight)}<span className="text-xs text-slate-500">/night</span></div>
         </div>
 
         <div className="flex items-center gap-2">
@@ -260,7 +263,7 @@ export function StickyBookingCard({ property }: StickyBookingCardProps) {
 
           <a
             href="#booking-form"
-            className="px-5 py-3 rounded-xl bg-[#F59A16] text-white font-extrabold text-xs shadow-md uppercase tracking-wider"
+            className="px-5 py-3 rounded-xl bg-[#F59A16] text-[#3F3F3F] font-extrabold text-xs shadow-md uppercase tracking-wider"
           >
             Reserve Stay
           </a>

@@ -99,6 +99,11 @@ export function wptexturizeQuotes(html: string): string {
     .join('');
 }
 
+// Empty <p><br></p> spacers left between list items are invalid list children (a11y "list" rule).
+const EMPTY_P = String.raw`\s*<p>(?:\s|&nbsp;|</?br\s*/?>)*</p>`;
+const stripEmptyListParagraphs = (html: string) =>
+  html.replace(new RegExp(String.raw`(<(?:ul|ol)\b[^>]*>|</li>)(?:${EMPTY_P})+`, 'g'), '$1');
+
 export function renderWpContent(raw: string | null | undefined): string {
-  return wptexturizeQuotes(wpautop(raw || ''));
+  return stripEmptyListParagraphs(wptexturizeQuotes(wpautop(raw || '')));
 }

@@ -8,15 +8,15 @@ import { PAJASA_WHY_CHOOSE } from '@/data/mockData';
 export function WhyChooseUs() {
   const getIcon = (iconName: string) => {
     switch (iconName) {
-      case 'PlusCircle': return <PlusCircle className="w-8 h-8 text-amber-500" />;
-      case 'Hand': return <Hand className="w-8 h-8 text-amber-500" />;
-      case 'Utensils': return <Utensils className="w-8 h-8 text-amber-500" />;
-      case 'DollarSign': return <DollarSign className="w-8 h-8 text-amber-500" />;
-      case 'ShieldCheck': return <ShieldCheck className="w-8 h-8 text-amber-500" />;
-      case 'Smile': return <Smile className="w-8 h-8 text-amber-500" />;
-      case 'Wifi': return <Wifi className="w-8 h-8 text-amber-500" />;
-      case 'Coffee': return <Coffee className="w-8 h-8 text-amber-500" />;
-      default: return <Home className="w-8 h-8 text-amber-500" />;
+      case 'PlusCircle': return <PlusCircle className="w-8 h-8 text-[#F59A16]" />;
+      case 'Hand': return <Hand className="w-8 h-8 text-[#F59A16]" />;
+      case 'Utensils': return <Utensils className="w-8 h-8 text-[#F59A16]" />;
+      case 'DollarSign': return <DollarSign className="w-8 h-8 text-[#F59A16]" />;
+      case 'ShieldCheck': return <ShieldCheck className="w-8 h-8 text-[#F59A16]" />;
+      case 'Smile': return <Smile className="w-8 h-8 text-[#F59A16]" />;
+      case 'Wifi': return <Wifi className="w-8 h-8 text-[#F59A16]" />;
+      case 'Coffee': return <Coffee className="w-8 h-8 text-[#F59A16]" />;
+      default: return <Home className="w-8 h-8 text-[#F59A16]" />;
     }
   };
 
@@ -27,7 +27,7 @@ export function WhyChooseUs() {
         {/* Header */}
         <div className="text-center max-w-2xl mx-auto space-y-2 mb-16">
           <h2 className="text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white">
-            Why Choose <span className="text-amber-500">PAJASA?</span>
+            Why Choose <span className="text-[#F59A16]">PAJASA?</span>
           </h2>
           <p className="text-sm text-slate-600 dark:text-slate-400">
             Dedicated care, 5-star hygiene, and complete safety measures tailored for corporate long stays.
@@ -43,9 +43,9 @@ export function WhyChooseUs() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: idx * 0.08 }}
-              className="p-8 rounded-3xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 text-center hover:shadow-xl hover:border-amber-500/50 transition-all duration-300 group"
+              className="p-8 rounded-3xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 text-center hover:shadow-xl hover:border-[#F59A16]/50 transition-all duration-300 group"
             >
-              <div className="w-16 h-16 rounded-full bg-amber-500/10 border border-amber-500/20 flex items-center justify-center mx-auto mb-5 group-hover:scale-110 transition-transform">
+              <div className="w-16 h-16 rounded-full bg-[#F59A16]/10 border border-[#F59A16]/20 flex items-center justify-center mx-auto mb-5 group-hover:scale-110 transition-transform">
                 {getIcon(feature.icon)}
               </div>
 

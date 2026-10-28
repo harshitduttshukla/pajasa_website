@@ -9,9 +9,9 @@ export const metadata: Metadata = {
   description: 'PAJASA Stay Solutions offers luxury serviced apartments for corporate housing across Mumbai, Pune, Delhi, Gurgaon, Bangalore, Hyderabad, Chennai, London, Singapore, Dubai, and New York.',
   keywords: 'serviced apartments, PAJASA apartments, corporate housing, executive stay, service apartment in Mumbai, service apartment in Pune, service apartment in Bangalore, service apartment in Delhi',
   icons: {
-    icon: 'https://www.pajasaapartments.com/wp-content/uploads/2024/11/cropped-pajasa_apartments-32x32.webp',
-    shortcut: 'https://www.pajasaapartments.com/wp-content/uploads/2024/11/cropped-pajasa_apartments-32x32.webp',
-    apple: 'https://www.pajasaapartments.com/wp-content/uploads/2024/11/cropped-pajasa_apartments-192x192.webp',
+    icon: '/icon-32.png',
+    shortcut: '/icon-32.png',
+    apple: '/icon-192.png',
   },
 };
 
@@ -22,7 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning className="dark">
-      <body className="bg-slate-950 text-slate-100 antialiased min-h-screen flex flex-col selection:bg-amber-500 selection:text-slate-950">
+      <body className="bg-slate-950 text-slate-100 antialiased min-h-screen flex flex-col selection:bg-[#F59A16] selection:text-slate-950">
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
           <Header />
           <main className="flex-1">{children}</main>

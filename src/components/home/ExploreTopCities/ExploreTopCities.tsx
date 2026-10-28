@@ -160,7 +160,7 @@ export function ExploreTopCities() {
             Explore verified student apartments, dorms, and private studios in{' '}
             <strong className="text-[#3F3F3F] font-bold">{selectedCountry.name}</strong>
           </span>
-          <span className="text-[#888888] text-[11px]">
+          <span className="text-[#666666] text-[11px]">
             Showing <strong className="text-[#F59A16] font-bold">{selectedCountry.cities.length}</strong> major student destinations
           </span>
         </div>

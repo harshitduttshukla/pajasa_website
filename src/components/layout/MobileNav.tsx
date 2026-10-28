@@ -48,7 +48,7 @@ export function MobileNav({ isOpen, onClose, onOpenBookingModal }: MobileNavProp
               <div className="flex items-center justify-between pb-6 border-b border-[#E8E8E8]">
                 <Link href="/" onClick={onClose} className="flex items-center gap-2">
                   <img
-                    src="https://www.pajasaapartments.com/wp-content/uploads/2024/11/pajasa_apartments.webp"
+                    src="https://dcdza1qr0mu11.cloudfront.net/uploads/wp/2024/11/pajasa_apartments.webp.webp"
                     alt="PAJASA Service Apartments"
                     className="h-8 w-auto object-contain"
                   />
@@ -77,7 +77,7 @@ export function MobileNav({ isOpen, onClose, onOpenBookingModal }: MobileNavProp
                   rel="noopener noreferrer"
                   className="flex items-center justify-center gap-2 py-2.5 px-3 rounded-lg bg-emerald-50 text-emerald-700 font-bold text-xs border border-emerald-200 transition-colors"
                 >
-                  <MessageCircle className="w-4 h-4 text-emerald-600" />
+                  <MessageCircle className="w-4 h-4 text-emerald-700" />
                   WhatsApp
                 </a>
               </div>
@@ -92,14 +92,14 @@ export function MobileNav({ isOpen, onClose, onOpenBookingModal }: MobileNavProp
                     className="flex items-center justify-between py-3 px-4 rounded-lg text-[#3F3F3F] hover:text-[#F59A16] hover:bg-orange-50 font-bold text-xs tracking-wider transition-all"
                   >
                     <span>{link.label}</span>
-                    <ChevronRight className="w-4 h-4 text-slate-400" />
+                    <ChevronRight className="w-4 h-4 text-slate-500" />
                   </Link>
                 ))}
               </nav>
 
               {/* Select City Mobile Selector */}
               <div className="mt-4 pt-4 border-t border-[#E8E8E8]">
-                <label className="block text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-2">
+                <label className="block text-[11px] font-bold text-slate-500 uppercase tracking-wider mb-2">
                   Select Destination City
                 </label>
                 <div className="grid grid-cols-2 gap-2">
@@ -124,7 +124,7 @@ export function MobileNav({ isOpen, onClose, onOpenBookingModal }: MobileNavProp
                   onClose();
                   onOpenBookingModal();
                 }}
-                className="w-full py-3 px-4 rounded-lg bg-[#F59A16] hover:bg-[#e08a0b] text-white font-bold text-xs uppercase tracking-wider shadow-sm flex items-center justify-center gap-2 transition-all cursor-pointer"
+                className="w-full py-3 px-4 rounded-lg bg-[#F59A16] hover:bg-[#e08a0b] text-[#3F3F3F] font-bold text-xs uppercase tracking-wider shadow-sm flex items-center justify-center gap-2 transition-all cursor-pointer"
               >
                 <Calendar className="w-4 h-4" />
                 BOOK NOW

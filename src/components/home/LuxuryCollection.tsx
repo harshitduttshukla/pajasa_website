@@ -65,7 +65,7 @@ export function LuxuryCollection() {
                   </div>
 
                   <div className="absolute bottom-4 left-4 z-10 flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-950/80 backdrop-blur-md text-white text-xs font-semibold">
-                    <Star className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
+                    <Star className="w-3.5 h-3.5 fill-[#F59A16] text-[#F59A16]" />
                     <span>{property.rating.toFixed(2)}</span>
                   </div>
                 </div>

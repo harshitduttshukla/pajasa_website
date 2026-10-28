@@ -30,7 +30,7 @@ export function SearchCard() {
           
           {/* LOCATION Field */}
           <div className="lg:col-span-3 px-4 py-1.5 text-left lg:border-r lg:border-[#E8E8E8]">
-            <label htmlFor="search-location" className="block text-[10px] font-extrabold tracking-wider text-slate-400 uppercase">
+            <label htmlFor="search-location" className="block text-[10px] font-extrabold tracking-wider text-slate-500 uppercase">
               LOCATION
             </label>
             <div className="flex items-center gap-2 mt-1">
@@ -53,7 +53,7 @@ export function SearchCard() {
 
           {/* CHECK-IN Field */}
           <div className="lg:col-span-3 px-4 py-1.5 text-left lg:border-r lg:border-[#E8E8E8]">
-            <label htmlFor="search-checkin" className="block text-[10px] font-extrabold tracking-wider text-slate-400 uppercase">
+            <label htmlFor="search-checkin" className="block text-[10px] font-extrabold tracking-wider text-slate-500 uppercase">
               CHECK-IN
             </label>
             <div className="flex items-center gap-2 mt-1">
@@ -71,7 +71,7 @@ export function SearchCard() {
 
           {/* CHECK-OUT Field */}
           <div className="lg:col-span-3 px-4 py-1.5 text-left lg:border-r lg:border-[#E8E8E8]">
-            <label htmlFor="search-checkout" className="block text-[10px] font-extrabold tracking-wider text-slate-400 uppercase">
+            <label htmlFor="search-checkout" className="block text-[10px] font-extrabold tracking-wider text-slate-500 uppercase">
               CHECK-OUT
             </label>
             <div className="flex items-center gap-2 mt-1">
@@ -89,7 +89,7 @@ export function SearchCard() {
 
           {/* GUESTS Field */}
           <div className="lg:col-span-3 lg:col-span-2 px-4 py-1.5 text-left">
-            <label htmlFor="search-guests" className="block text-[10px] font-extrabold tracking-wider text-slate-400 uppercase">
+            <label htmlFor="search-guests" className="block text-[10px] font-extrabold tracking-wider text-slate-500 uppercase">
               GUESTS
             </label>
             <div className="flex items-center gap-2 mt-1">
@@ -120,7 +120,7 @@ export function SearchCard() {
           <button
             onClick={handleSearch}
             type="button"
-            className="w-full lg:w-auto px-6 py-3.5 rounded-xl bg-[#F59A16] hover:bg-[#e08a0b] text-white font-extrabold text-xs uppercase tracking-wider shadow-md transition-all flex items-center justify-center gap-2 cursor-pointer transform hover:-translate-y-0.5"
+            className="w-full lg:w-auto px-6 py-3.5 rounded-xl bg-[#F59A16] hover:bg-[#e08a0b] text-[#3F3F3F] font-extrabold text-xs uppercase tracking-wider shadow-md transition-all flex items-center justify-center gap-2 cursor-pointer transform hover:-translate-y-0.5"
           >
             <span>SEARCH APARTMENTS</span>
           </button>

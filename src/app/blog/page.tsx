@@ -54,7 +54,7 @@ export default async function BlogListPage({ searchParams }: BlogListPageProps) 
               <div className="p-5 space-y-2">
                 <div className="flex items-center justify-between gap-2 text-[11px] text-[#F59A16] font-extrabold">
                   <span>{formatDate(article.created_at)}</span>
-                  {article.category && <span className="text-slate-400 font-semibold truncate">{article.category}</span>}
+                  {article.category && <span className="text-slate-500 font-semibold truncate">{article.category}</span>}
                 </div>
                 <h2 className="text-base font-extrabold text-[#3F3F3F] group-hover:text-[#F59A16]! transition-colors line-clamp-2">
                   {article.title}
@@ -70,11 +70,11 @@ export default async function BlogListPage({ searchParams }: BlogListPageProps) 
             {page > 1 && <Link href={href(page - 1)} rel="prev" className="px-3 py-1.5 rounded-lg border border-[#E8E8E8] bg-white text-xs font-bold hover:text-[#F59A16]">«</Link>}
             {pages.map((n, i) => (
               <span key={n} className="flex items-center gap-2">
-                {i > 0 && n - pages[i - 1] > 1 && <span className="text-xs text-slate-400">…</span>}
+                {i > 0 && n - pages[i - 1] > 1 && <span className="text-xs text-slate-500">…</span>}
                 <Link
                   href={href(n)}
                   aria-current={n === page ? 'page' : undefined}
-                  className={`px-3 py-1.5 rounded-lg border text-xs font-bold ${n === page ? 'bg-[#F59A16] border-[#F59A16] text-white' : 'bg-white border-[#E8E8E8] hover:text-[#F59A16]'}`}
+                  className={`px-3 py-1.5 rounded-lg border text-xs font-bold ${n === page ? 'bg-[#F59A16] border-[#F59A16] text-[#3F3F3F]' : 'bg-white border-[#E8E8E8] hover:text-[#F59A16]'}`}
                 >
                   {n}
                 </Link>

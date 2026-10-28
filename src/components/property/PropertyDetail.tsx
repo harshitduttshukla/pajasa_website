@@ -93,7 +93,7 @@ export function PropertyDetail({ slug, initial }: PropertyDetailProps) {
           </p>
           <Link
             href="/properties"
-            className="inline-block px-5 py-2.5 rounded-xl bg-[#F59A16] hover:bg-[#e08a0b] text-white text-xs font-bold shadow-xs transition-colors"
+            className="inline-block px-5 py-2.5 rounded-xl bg-[#F59A16] hover:bg-[#e08a0b] text-[#3F3F3F] text-xs font-bold shadow-xs transition-colors"
           >
             Browse All Properties
           </Link>
@@ -110,7 +110,7 @@ export function PropertyDetail({ slug, initial }: PropertyDetailProps) {
         {/* 1. Breadcrumb Trail */}
         <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs text-[#666666] font-semibold pt-2">
           <Link href="/" className="hover:text-[#F59A16] transition-colors">Home</Link>
-          <ChevronRight className="w-3.5 h-3.5 text-slate-400" />
+          <ChevronRight className="w-3.5 h-3.5 text-slate-500" />
           {property.isSource ? (
             <Link href={(property.href || '').split('/').slice(0, 3).join('/') + '/'} className="hover:text-[#F59A16] transition-colors">
               {property.city}
@@ -118,13 +118,13 @@ export function PropertyDetail({ slug, initial }: PropertyDetailProps) {
           ) : (
             <>
           <Link href="/properties" className="hover:text-[#F59A16] transition-colors">Properties</Link>
-          <ChevronRight className="w-3.5 h-3.5 text-slate-400" />
+          <ChevronRight className="w-3.5 h-3.5 text-slate-500" />
           <Link href={cityUrl(property.city)} className="hover:text-[#F59A16] transition-colors">
             {property.city}
           </Link>
             </>
           )}
-          <ChevronRight className="w-3.5 h-3.5 text-slate-400" />
+          <ChevronRight className="w-3.5 h-3.5 text-slate-500" />
           <span className="text-[#3F3F3F] truncate font-extrabold">{property.seo?.breadcrumb_title || property.title}</span>
         </nav>
 
@@ -164,7 +164,7 @@ export function PropertyDetail({ slug, initial }: PropertyDetailProps) {
                 {formatCurrency(property.pricePerNight)}
                 <span className="text-xs font-normal text-[#666666]"> / night</span>
               </div>
-              {property.pricePerMonth > 0 && <div className="text-xs text-emerald-600 font-extrabold mt-0.5">
+              {property.pricePerMonth > 0 && <div className="text-xs text-emerald-700 font-extrabold mt-0.5">
                 Monthly Rate: {formatCurrency(property.pricePerMonth)}
               </div>}
             </div>
@@ -178,7 +178,7 @@ export function PropertyDetail({ slug, initial }: PropertyDetailProps) {
               >
                 <Share2 className="w-4 h-4" />
                 {copied && (
-                  <span className="absolute -top-8 right-0 px-2 py-1 bg-[#F59A16] text-white text-[10px] font-bold rounded shadow">
+                  <span className="absolute -top-8 right-0 px-2 py-1 bg-[#F59A16] text-[#3F3F3F] text-[10px] font-bold rounded shadow">
                     Link Copied!
                   </span>
                 )}
@@ -264,9 +264,9 @@ export function PropertyDetail({ slug, initial }: PropertyDetailProps) {
             
             {/* Overview */}
             <section id="overview" className="space-y-4 scroll-mt-28">
-              <h3 className="text-xl font-extrabold text-[#3F3F3F]">
+              <h2 className="text-xl font-extrabold text-[#3F3F3F]">
                 Residence Overview
-              </h3>
+              </h2>
               {property.descriptionHtml ? (
                 <div
                   className="wp-content text-sm text-[#666666] leading-relaxed"
@@ -280,9 +280,9 @@ export function PropertyDetail({ slug, initial }: PropertyDetailProps) {
 
               {/* Bullet Highlights */}
               {property.highlights.length > 0 && <div className="p-5 rounded-2xl bg-orange-50/50 border border-orange-100 space-y-3">
-                <h4 className="text-xs font-extrabold text-[#F59A16] uppercase tracking-wider">
+                <h3 className="text-xs font-extrabold text-[#F59A16] uppercase tracking-wider">
                   Executive Corporate Highlights
-                </h4>
+                </h3>
                 <ul className="space-y-2 text-xs text-[#3F3F3F]">
                   {property.highlights.map((highlight, idx) => (
                     <li key={idx} className="flex items-start gap-2.5">
@@ -296,9 +296,9 @@ export function PropertyDetail({ slug, initial }: PropertyDetailProps) {
 
             {/* Details Specs Table */}
             <section id="details-table" className="space-y-4 scroll-mt-28">
-              <h3 className="text-xl font-extrabold text-[#3F3F3F]">
+              <h2 className="text-xl font-extrabold text-[#3F3F3F]">
                 Property Details & Specifications
-              </h3>
+              </h2>
 
               <div className="rounded-2xl border border-[#E8E8E8] overflow-hidden bg-white shadow-xs">
                 <div className="grid grid-cols-1 sm:grid-cols-2 divide-y sm:divide-y-0 sm:divide-x divide-[#E8E8E8] text-xs">
@@ -315,7 +315,7 @@ export function PropertyDetail({ slug, initial }: PropertyDetailProps) {
                     <div className="flex justify-between"><span className="text-slate-500">Bathrooms</span><span className="font-bold text-[#3F3F3F]">{property.bathrooms} En-Suite</span></div>
                     {!property.isSource && <>
                     <div className="flex justify-between"><span className="text-slate-500">Caretaker Status</span><span className="font-extrabold text-[#F59A16]">Dedicated Caretaker Onsite</span></div>
-                    <div className="flex justify-between"><span className="text-slate-500">GST Billing</span><span className="font-bold text-emerald-600">100% Tax Credit Invoice</span></div>
+                    <div className="flex justify-between"><span className="text-slate-500">GST Billing</span><span className="font-bold text-emerald-700">100% Tax Credit Invoice</span></div>
                     <div className="flex justify-between"><span className="text-slate-500">Check-in / Out</span><span className="font-bold text-[#3F3F3F]">2:00 PM / 11:00 AM</span></div>
                     </>}
                   </div>
@@ -325,9 +325,9 @@ export function PropertyDetail({ slug, initial }: PropertyDetailProps) {
 
             {/* Features & Amenities Tag Grid */}
             <section id="amenities" className="space-y-4 scroll-mt-28">
-              <h3 className="text-xl font-extrabold text-[#3F3F3F]">
+              <h2 className="text-xl font-extrabold text-[#3F3F3F]">
                 Features & Included Amenities
-              </h3>
+              </h2>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {property.amenities.map((amenity) => (
@@ -356,9 +356,9 @@ export function PropertyDetail({ slug, initial }: PropertyDetailProps) {
 
             {/* House Rules */}
             <section id="house-rules" className="p-6 rounded-2xl bg-white border border-[#E8E8E8] space-y-3 text-xs scroll-mt-28 shadow-xs">
-              <h4 className="text-sm font-extrabold text-[#3F3F3F]">
+              <h3 className="text-sm font-extrabold text-[#3F3F3F]">
                 Stay Guidelines & Caretaker Policy
-              </h4>
+              </h3>
               <ul className="space-y-2 text-[#666666]">
                 {property.houseRules.map((rule, idx) => (
                   <li key={idx} className="flex items-center gap-2">
@@ -381,9 +381,9 @@ export function PropertyDetail({ slug, initial }: PropertyDetailProps) {
         {/* Similar Residences Carousel */}
         <div className="pt-12 border-t border-[#E8E8E8] space-y-8">
           <div className="text-center max-w-xl mx-auto space-y-2">
-            <h3 className="text-2xl font-extrabold text-[#3F3F3F]">
+            <h2 className="text-2xl font-extrabold text-[#3F3F3F]">
               Similar Executive Serviced Residences
-            </h3>
+            </h2>
             <p className="text-xs text-[#666666]">
               Explore related corporate serviced stays in top business corridors.
             </p>

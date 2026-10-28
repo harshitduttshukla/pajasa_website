@@ -50,9 +50,9 @@ export function AmenitiesStrip() {
                   <Icon className="w-5 h-5 text-[#F59A16]" strokeWidth={1.75} />
                 </div>
                 <div>
-                  <h4 className="text-xs sm:text-sm font-extrabold text-[#3F3F3F]">
+                  <p className="text-xs sm:text-sm font-extrabold text-[#3F3F3F]">
                     {item.title}
-                  </h4>
+                  </p>
                   <p className="text-[11px] sm:text-xs text-[#666666] font-normal leading-tight mt-0.5">
                     {item.description}
                   </p>

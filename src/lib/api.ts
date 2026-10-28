@@ -40,7 +40,7 @@ export function getImageUrl(imagePath?: string | null): string {
 
 export function getBlogImageUrl(imagePath?: string | null): string {
   if (!imagePath || imagePath.trim() === '') {
-    return 'https://www.pajasaapartments.com/wp-content/uploads/2026/07/Serviced-Apartments-vs-Hotels-1-400x242.png';
+    return 'https://dcdza1qr0mu11.cloudfront.net/uploads/wp/2026/07/Serviced-Apartments-vs-Hotels-1-400x242.png.webp';
   }
   const cleanPath = imagePath.trim();
   if (cleanPath.startsWith('http://') || cleanPath.startsWith('https://')) {
