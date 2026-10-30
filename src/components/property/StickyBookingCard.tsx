@@ -44,7 +44,8 @@ export function StickyBookingCard({ property }: StickyBookingCardProps) {
   const nights = calculateNights();
   const subtotal = property.pricePerNight * nights;
   const corporateDiscount = isCorporate && nights >= 7 ? Math.round(subtotal * 0.15) : 0;
-  const gstTax = Math.round((subtotal - corporateDiscount) * 0.12);
+  const gstRate = property.pricePerNight > 7500 ? 18 : 5;
+  const gstTax = Math.round((subtotal - corporateDiscount) * gstRate / 100);
   const total = subtotal - corporateDiscount + gstTax;
 
   const onSubmitBooking = (data: PropertyBookingFormValues) => {
@@ -72,7 +73,7 @@ export function StickyBookingCard({ property }: StickyBookingCardProps) {
             </div>
           </div>
           <a
-            href="tel:+919811029789"
+            href="tel:+917738777602"
             className="p-2.5 rounded-full bg-[#F59A16] text-[#3F3F3F] hover:bg-[#e08a0b] transition-all cursor-pointer shadow-xs"
             aria-label="Call Concierge Manager"
             title="Call Manager"
@@ -197,7 +198,7 @@ export function StickyBookingCard({ property }: StickyBookingCardProps) {
               )}
 
               <div className="flex items-center justify-between text-[#666666]">
-                <span>GST (12%)</span>
+                <span>GST ({gstRate}%)</span>
                 <span className="font-bold text-[#3F3F3F]">{formatCurrency(gstTax)}</span>
               </div>
 
@@ -213,13 +214,13 @@ export function StickyBookingCard({ property }: StickyBookingCardProps) {
               className="w-full py-3.5 px-4 rounded-xl bg-[#F59A16] hover:bg-[#e08a0b] text-[#3F3F3F] font-extrabold text-xs uppercase tracking-wider shadow-md transition-all flex items-center justify-center gap-2 cursor-pointer transform hover:-translate-y-0.5"
             >
               <Calendar className="w-4 h-4" />
-              <span>Reserve Corporate Stay</span>
+              <span>Enquiry Now</span>
             </button>
 
             {/* Fast Call / WhatsApp Buttons */}
             <div className="grid grid-cols-2 gap-2 pt-1">
               <a
-                href="tel:+919811029789"
+                href="tel:+917738777602"
                 className="py-2.5 px-3 rounded-xl bg-slate-50 border border-[#E8E8E8] text-[#3F3F3F] hover:text-[#F59A16] font-bold text-xs flex items-center justify-center gap-1.5 transition-colors cursor-pointer"
               >
                 <Phone className="w-3.5 h-3.5 text-[#F59A16]" />
@@ -227,7 +228,7 @@ export function StickyBookingCard({ property }: StickyBookingCardProps) {
               </a>
 
               <a
-                href="https://api.whatsapp.com/send?phone=919811029789&text=Hi%20PAJASA%20Team%2C%20I%20am%20interested%20in%20booking%20corporate%20serviced%20apartment."
+                href="https://api.whatsapp.com/send?phone=917738777602&text=Hi%20PAJASA%20Team%2C%20I%20am%20interested%20in%20booking%20corporate%20serviced%20apartment."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="py-2.5 px-3 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-700 font-bold text-xs flex items-center justify-center gap-1.5 transition-colors"
@@ -254,7 +255,7 @@ export function StickyBookingCard({ property }: StickyBookingCardProps) {
 
         <div className="flex items-center gap-2">
           <a
-            href="tel:+919811029789"
+            href="tel:+917738777602"
             className="p-3 rounded-full bg-slate-100 text-[#3F3F3F] border border-[#E8E8E8]"
             aria-label="Call Helpline"
           >
