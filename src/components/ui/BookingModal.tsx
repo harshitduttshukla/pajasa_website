@@ -214,7 +214,7 @@ export function BookingModal({ isOpen, onClose, selectedProperty }: BookingModal
                     className="w-full py-3.5 px-6 rounded-xl bg-[#F59A16] hover:bg-[#e08a0b] text-[#3F3F3F] font-extrabold text-xs uppercase tracking-wider shadow-md transition-all flex items-center justify-center gap-2 cursor-pointer"
                   >
                     <Calendar className="w-4 h-4" />
-                    <span>Reserve Corporate Stay</span>
+                    <span>Enquiry Now</span>
                   </button>
                 </form>
               </div>
