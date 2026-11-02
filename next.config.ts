@@ -63,6 +63,10 @@ if (cfDomain && !remotePatterns.some((p) => p.hostname === cfDomain)) {
 const nextConfig: NextConfig = {
   // Original WordPress permalinks end with a slash (e.g. /in/mumbai/)
   trailingSlash: true,
+  // The /properties directory page was removed; send old links home
+  async redirects() {
+    return [{ source: '/properties', destination: '/', permanent: true }];
+  },
   images: {
     unoptimized: true,
     remotePatterns,
