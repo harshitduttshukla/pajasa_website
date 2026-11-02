@@ -61,7 +61,7 @@ export default function ContactPage() {
                   <Phone className="w-5 h-5 text-[#F59A16] shrink-0" />
                   <div>
                     <span className="font-extrabold text-[#3F3F3F] block">Direct Desk</span>
-                    <a href="tel:+919811029789" className="text-[#666666] hover:text-[#F59A16] transition-colors font-bold">+91 98110 29789</a>
+                    <a href="tel:+917738777602" className="text-[#666666] hover:text-[#F59A16] transition-colors font-bold">+91 77387 77602</a>
                   </div>
                 </div>
 
@@ -69,8 +69,8 @@ export default function ContactPage() {
                   <MessageCircle className="w-5 h-5 text-emerald-700 shrink-0" />
                   <div>
                     <span className="font-extrabold text-[#3F3F3F] block">WhatsApp Concierge</span>
-                    <a href="https://api.whatsapp.com/send?phone=919811029789" target="_blank" rel="noopener noreferrer" className="text-emerald-700 font-bold hover:underline">
-                      Chat Now (+91 98110 29789)
+                    <a href="https://api.whatsapp.com/send?phone=917738777602" target="_blank" rel="noopener noreferrer" className="text-emerald-700 font-bold hover:underline">
+                      Chat Now (+91 77387 77602)
                     </a>
                   </div>
                 </div>
@@ -138,7 +138,7 @@ export default function ContactPage() {
                     <label className="block text-[#3F3F3F] font-bold mb-1">Phone Number</label>
                     <input
                       type="tel"
-                      placeholder="+91 98110 29789"
+                      placeholder="+91 77387 77602"
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                       className="w-full py-3 px-4 rounded-xl bg-slate-50 border border-[#E8E8E8] text-[#3F3F3F] focus:outline-none focus:border-[#F59A16]"

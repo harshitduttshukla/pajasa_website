@@ -65,14 +65,14 @@ export function MobileNav({ isOpen, onClose, onOpenBookingModal }: MobileNavProp
               {/* Quick Contact Actions */}
               <div className="my-6 grid grid-cols-2 gap-3">
                 <a
-                  href="tel:+919811029789"
+                  href="tel:+917738777602"
                   className="flex items-center justify-center gap-2 py-2.5 px-3 rounded-lg bg-slate-100 hover:bg-slate-200 text-[#3F3F3F] font-bold text-xs border border-[#E8E8E8] transition-colors"
                 >
                   <Phone className="w-4 h-4 text-[#F59A16]" />
                   Call Us
                 </a>
                 <a
-                  href="https://wa.me/919811029789"
+                  href="https://wa.me/917738777602"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center gap-2 py-2.5 px-3 rounded-lg bg-emerald-50 text-emerald-700 font-bold text-xs border border-emerald-200 transition-colors"

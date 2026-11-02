@@ -175,7 +175,7 @@ export function StickyBookingCard({ property }: StickyBookingCardProps) {
                 <label className="block text-[#3F3F3F] font-bold mb-1">Phone *</label>
                 <input
                   type="tel"
-                  placeholder="+91 98110 29789"
+                  placeholder="+91 77387 77602"
                   {...register('phone')}
                   className="w-full py-2.5 px-3 rounded-xl bg-slate-50 border border-[#E8E8E8] text-[#3F3F3F] focus:outline-none focus:border-[#F59A16]"
                 />

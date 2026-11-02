@@ -109,11 +109,11 @@ export function Header({ onOpenBookingModal }: HeaderProps) {
 
             {/* Phone Number */}
             <a
-              href="tel:+919811029789"
+              href="tel:+917738777602"
               className="flex items-center gap-1.5 text-xs font-bold text-[#3F3F3F] hover:text-[#F59A16] transition-colors"
             >
               <Phone className="w-3.5 h-3.5 text-[#F59A16]" />
-              <span>+91 98110 29789</span>
+              <span>+91 77387 77602</span>
             </a>
 
             {/* Primary Orange BOOK NOW CTA */}
@@ -128,7 +128,7 @@ export function Header({ onOpenBookingModal }: HeaderProps) {
           {/* Mobile Right Controls */}
           <div className="flex items-center gap-3 lg:hidden">
             <a
-              href="tel:+919811029789"
+              href="tel:+917738777602"
               className="p-2 rounded-lg bg-[#F59A16] text-[#3F3F3F] font-bold text-xs"
               aria-label="Call Helpline"
             >
