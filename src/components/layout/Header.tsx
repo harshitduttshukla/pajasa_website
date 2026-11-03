@@ -43,9 +43,8 @@ export function Header({ onOpenBookingModal }: HeaderProps) {
 
   const navLinks = [
     { label: 'HOME', href: '/' },
-    { label: 'APARTMENTS', href: '/properties' },
-    { label: 'SERVICES', href: '/corporate' },
-    { label: 'ABOUT US', href: '/corporate' },
+    { label: 'SERVICES', href: '/services' },
+    { label: 'ABOUT US', href: '/about-us' },
     { label: 'CONTACT', href: '/contact' },
   ];
 
