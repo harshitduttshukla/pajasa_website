@@ -118,16 +118,14 @@ export function MobileNav({ isOpen, onClose, onOpenBookingModal }: MobileNavProp
 
             {/* Bottom Section */}
             <div className="pt-6 border-t border-[#E8E8E8] space-y-4">
-              <button
-                onClick={() => {
-                  onClose();
-                  onOpenBookingModal();
-                }}
+              <Link
+                href="/contact"
+                onClick={onClose}
                 className="w-full py-3 px-4 rounded-lg bg-[#F59A16] hover:bg-[#e08a0b] text-[#3F3F3F] font-bold text-xs uppercase tracking-wider shadow-sm flex items-center justify-center gap-2 transition-all cursor-pointer"
               >
                 <Calendar className="w-4 h-4" />
-                BOOK NOW
-              </button>
+                ENQUIRE NOW
+              </Link>
 
               <div className="text-center text-[11px] text-slate-500 font-medium">
                 © {new Date().getFullYear()} PAJASA Apartments. All rights reserved.

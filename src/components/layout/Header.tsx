@@ -115,13 +115,13 @@ export function Header({ onOpenBookingModal }: HeaderProps) {
               <span>+91 77387 77602</span>
             </a>
 
-            {/* Primary Orange BOOK NOW CTA */}
-            <button
-              onClick={() => onOpenBookingModal?.()}
+            {/* Primary Orange ENQUIRE NOW CTA */}
+            <Link
+              href="/contact"
               className="px-5 py-2.5 rounded-lg bg-[#F59A16] hover:bg-[#e08a0b] text-[#3F3F3F] font-bold text-xs uppercase tracking-wider shadow-sm transition-all cursor-pointer transform hover:-translate-y-0.5 active:translate-y-0"
             >
-              BOOK NOW
-            </button>
+              ENQUIRE NOW
+            </Link>
           </div>
 
           {/* Mobile Right Controls */}

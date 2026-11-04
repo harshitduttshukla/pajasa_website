@@ -96,7 +96,7 @@ export function CountryTabs({
       <div
         ref={scrollContainerRef}
         role="tablist"
-        aria-label="Student accommodation countries"
+        aria-label="Corporate accommodation countries"
         className="flex items-center gap-2.5 overflow-x-auto scroll-smooth py-1 px-1 sm:px-2 w-full no-scrollbar select-none"
         style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
       >

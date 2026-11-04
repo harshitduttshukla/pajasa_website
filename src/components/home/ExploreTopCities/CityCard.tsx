@@ -31,12 +31,12 @@ export function CityCard({ city }: CityCardProps) {
     <Link
       href={targetHref}
       className="group relative block w-full h-64 sm:h-72 lg:h-80 rounded-2xl overflow-hidden border border-[#E8E8E8] shadow-xs hover:shadow-xl hover:border-slate-300 transition-all duration-300 select-none bg-slate-100"
-      aria-label={`View student accommodations in ${city.name}`}
+      aria-label={`View corporate accommodations in ${city.name}`}
     >
       {/* City Background Image */}
       <Image
         src={imgSrc}
-        alt={`Student accommodation in ${city.name}`}
+        alt={`Corporate accommodation in ${city.name}`}
         fill
         sizes="(max-width: 640px) 72vw, (max-width: 768px) 46vw, (max-width: 1024px) 31vw, 20vw"
         unoptimized

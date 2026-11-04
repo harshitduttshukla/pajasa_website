@@ -63,7 +63,7 @@ export function ExploreTopCities() {
   return (
     <section
       id="explore-top-cities"
-      aria-label="Explore student accommodations by city"
+      aria-label="Explore corporate accommodations by location"
       className="py-16 sm:py-20 bg-[#FAFAF8] text-[#3F3F3F] border-t border-[#E8E8E8] relative overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
@@ -72,15 +72,15 @@ export function ExploreTopCities() {
         <div className="text-center max-w-3xl mx-auto space-y-2.5">
           <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-orange-50 border border-orange-200 text-[#F59A16] text-xs font-extrabold tracking-wider uppercase shadow-2xs">
             <GraduationCap className="w-4 h-4 text-[#F59A16]" />
-            <span>INDIA STUDENT & EXECUTIVE HUBS</span>
+            <span>INDIA CORPORATE & EXECUTIVE HUBS</span>
           </div>
 
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-[#3F3F3F]">
-            Explore Student Accommodation by City
+            Explore Corporate Accommodation by Location
           </h2>
 
           <p className="text-xs sm:text-sm text-[#666666] font-normal leading-relaxed">
-            Discover comfortable and convenient student accommodation in popular destinations
+            Discover fully furnished serviced apartments for corporate stays in major business hubs
           </p>
         </div>
 
@@ -157,11 +157,11 @@ export function ExploreTopCities() {
         {/* Bottom Sub-info / Hint */}
         <div className="flex flex-col sm:flex-row items-center justify-between gap-3 pt-2 text-xs text-[#666666] border-t border-[#EAEAEA]">
           <span>
-            Explore verified student apartments, dorms, and private studios in{' '}
+            Explore verified serviced apartments for corporate stays in{' '}
             <strong className="text-[#3F3F3F] font-bold">{selectedCountry.name}</strong>
           </span>
           <span className="text-[#666666] text-[11px]">
-            Showing <strong className="text-[#F59A16] font-bold">{selectedCountry.cities.length}</strong> major student destinations
+            Showing <strong className="text-[#F59A16] font-bold">{selectedCountry.cities.length}</strong> major business destinations
           </span>
         </div>
 
