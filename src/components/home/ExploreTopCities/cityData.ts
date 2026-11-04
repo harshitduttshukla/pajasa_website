@@ -1,5 +1,6 @@
 import { CountryAccommodation } from './types';
 
+// Tabs are PAJASA's own cities; counts come from the property listings (grouped by URL locality).
 export const STUDENT_CITIES_DATA: CountryAccommodation[] = [
   {
     id: 'all-india',
@@ -8,194 +9,158 @@ export const STUDENT_CITIES_DATA: CountryAccommodation[] = [
     flag: '🇮🇳',
     cities: [
       {
-        id: 'in-mumbai',
-        name: 'Mumbai',
-        countryCode: 'in',
-        state: 'Maharashtra',
-        image: 'https://dcdza1qr0mu11.cloudfront.net/uploads/wp/2025/05/Service-Apartment-in-Mumbai-by-PAJASA-1170x921.webp.webp',
-        propertyCount: 28,
-        slug: '/in/mumbai/',
-      },
-      {
         id: 'in-bengaluru',
         name: 'Bengaluru',
         countryCode: 'in',
-        state: 'Karnataka',
         image: 'https://dcdza1qr0mu11.cloudfront.net/uploads/wp/2025/09/Service-PAJASA-Apartments-in-Bangalore-by-PAJASA.webp-1170x921.webp.webp',
         propertyCount: 99,
-        slug: '/in/bengaluru/',
+        slug: '/in/bengaluru/'
       },
       {
         id: 'in-pune',
         name: 'Pune',
         countryCode: 'in',
-        state: 'Maharashtra',
         image: 'https://dcdza1qr0mu11.cloudfront.net/uploads/wp/2023/11/Service-Apartments-in-Pune-by-PAJASA-1170x921.jpeg.webp',
-        propertyCount: 48,
-        slug: '/in/pune/',
+        propertyCount: 47,
+        slug: '/in/pune/'
+      },
+      {
+        id: 'in-mumbai',
+        name: 'Mumbai',
+        countryCode: 'in',
+        image: 'https://dcdza1qr0mu11.cloudfront.net/uploads/wp/2025/05/Service-Apartment-in-Mumbai-by-PAJASA-1170x921.webp.webp',
+        propertyCount: 33,
+        slug: '/in/mumbai/'
       },
       {
         id: 'in-new-delhi',
         name: 'New Delhi',
         countryCode: 'in',
-        state: 'Delhi NCR',
         image: 'https://dcdza1qr0mu11.cloudfront.net/uploads/wp/2019/09/Service-Apartments-in-Delhi-by-PAJASA-1-1170x921.jpeg.webp',
-        propertyCount: 21,
-        slug: '/in/new-delhi/',
-      },
-      {
-        id: 'in-hyderabad',
-        name: 'Hyderabad',
-        countryCode: 'in',
-        state: 'Telangana',
-        image: 'https://dcdza1qr0mu11.cloudfront.net/uploads/wp/2019/09/Service-Apartments-in-Hyderabad-by-PAJASA-1170x921.jpeg.webp',
-        propertyCount: 14,
-        slug: '/in/hyderabad/',
-      },
-      {
-        id: 'in-gurugram',
-        name: 'Gurugram',
-        countryCode: 'in',
-        state: 'Haryana',
-        image: 'https://dcdza1qr0mu11.cloudfront.net/uploads/wp/2024/04/Service-Apartment-in-Gurugram-by-PAJASA.jpeg.webp',
-        propertyCount: 16,
-        slug: '/in/gurugram/',
-      },
-      {
-        id: 'in-chennai',
-        name: 'Chennai',
-        countryCode: 'in',
-        state: 'Tamil Nadu',
-        image: 'https://dcdza1qr0mu11.cloudfront.net/uploads/wp/2019/09/Service-Apartments-in-Chennai-by-PAJASA-1170x921.jpeg.webp',
-        propertyCount: 11,
-        slug: '/in/chennai/',
-      },
-      {
-        id: 'in-noida',
-        name: 'Noida',
-        countryCode: 'in',
-        state: 'Uttar Pradesh',
-        image: 'https://dcdza1qr0mu11.cloudfront.net/uploads/wp/2019/09/Service-Apartments-in-Noida-by-PAJASA-1170x921.jpeg.webp',
-        propertyCount: 12,
-        slug: '/in/noida/',
+        propertyCount: 20,
+        slug: '/in/new-delhi/'
       },
       {
         id: 'in-kolkata',
         name: 'Kolkata',
         countryCode: 'in',
-        state: 'West Bengal',
         image: 'https://dcdza1qr0mu11.cloudfront.net/uploads/wp/2026/05/Service-apartments-in-Salt-Lake-Kolkata.webp.webp',
-        propertyCount: 10,
-        slug: '/in/kolkata/',
+        propertyCount: 17,
+        slug: '/in/kolkata/'
       },
       {
-        id: 'in-powai',
-        name: 'Powai (Mumbai)',
+        id: 'in-gurugram',
+        name: 'Gurugram',
         countryCode: 'in',
-        state: 'Maharashtra',
-        image: 'https://dcdza1qr0mu11.cloudfront.net/uploads/wp/2019/09/Serviced-Apartments-in-Powai-Mumbai.jpeg.webp',
-        propertyCount: 18,
-        slug: '/in/mumbai/powai/',
+        image: 'https://dcdza1qr0mu11.cloudfront.net/uploads/wp/2024/04/Service-Apartment-in-Gurugram-by-PAJASA.jpeg.webp',
+        propertyCount: 16,
+        slug: '/in/gurugram/'
       },
       {
-        id: 'in-whitefield',
-        name: 'Whitefield (Bengaluru)',
+        id: 'in-chennai',
+        name: 'Chennai',
         countryCode: 'in',
-        state: 'Karnataka',
-        image: 'https://dcdza1qr0mu11.cloudfront.net/uploads/wp/2026/05/Service-Apartments-in-Whitefield-Bengaluru-PAJASA-1170x921.jpg.webp',
-        propertyCount: 24,
-        slug: '/in/bengaluru/whitefield/',
+        image: 'https://dcdza1qr0mu11.cloudfront.net/uploads/wp/2019/09/Service-Apartments-in-Chennai-by-PAJASA-1170x921.jpeg.webp',
+        propertyCount: 11,
+        slug: '/in/chennai/'
       },
       {
-        id: 'in-hitech-city',
-        name: 'HITEC City (Hyderabad)',
+        id: 'in-noida',
+        name: 'Noida',
         countryCode: 'in',
-        state: 'Telangana',
-        image: 'https://www.pajasaapartments.com/wp-content/uploads/2019/09/Serviced-Apartments-in-Hitech-City-Hyderabad.jpeg',
-        propertyCount: 19,
-        slug: '/in/hyderabad/hitech-city/',
+        image: 'https://dcdza1qr0mu11.cloudfront.net/uploads/wp/2019/09/Service-Apartments-in-Noida-by-PAJASA-1170x921.jpeg.webp',
+        propertyCount: 8,
+        slug: '/in/noida/'
       },
-    ],
+      {
+        id: 'in-hyderabad',
+        name: 'Hyderabad',
+        countryCode: 'in',
+        image: 'https://dcdza1qr0mu11.cloudfront.net/uploads/wp/2019/09/Service-Apartments-in-Hyderabad-by-PAJASA-1170x921.jpeg.webp',
+        propertyCount: 4,
+        slug: '/in/hyderabad/'
+      }
+    ]
   },
   {
-    id: 'maharashtra',
-    name: 'Maharashtra',
+    id: 'mumbai',
+    name: 'Mumbai',
     code: 'in',
-    flag: '🏙️',
+    flag: '🌊',
     cities: [
       {
-        id: 'mh-mumbai',
+        id: 'mum-mumbai',
         name: 'Mumbai',
         countryCode: 'in',
-        state: 'Maharashtra',
         image: 'https://dcdza1qr0mu11.cloudfront.net/uploads/wp/2025/05/Service-Apartment-in-Mumbai-by-PAJASA-1170x921.webp.webp',
-        propertyCount: 28,
-        slug: '/in/mumbai/',
+        propertyCount: 33,
+        slug: '/in/mumbai/'
       },
       {
-        id: 'mh-pune',
-        name: 'Pune',
+        id: 'mumbai-andheri-east',
+        name: 'Andheri East, Mumbai',
         countryCode: 'in',
-        state: 'Maharashtra',
-        image: 'https://dcdza1qr0mu11.cloudfront.net/uploads/wp/2023/11/Service-Apartments-in-Pune-by-PAJASA-1170x921.jpeg.webp',
-        propertyCount: 48,
-        slug: '/in/pune/',
+        image: 'https://dcdza1qr0mu11.cloudfront.net/uploads/wp/2019/04/Serviced-Apartments-in-Andheri-East-Mumbai.jpg.webp',
+        propertyCount: 5,
+        slug: '/in/mumbai/'
       },
       {
-        id: 'mh-powai',
+        id: 'mumbai-powai',
         name: 'Powai, Mumbai',
         countryCode: 'in',
-        state: 'Maharashtra',
-        image: 'https://dcdza1qr0mu11.cloudfront.net/uploads/wp/2019/09/Serviced-Apartments-in-Powai-Mumbai.jpeg.webp',
-        propertyCount: 18,
-        slug: '/in/mumbai/powai/',
+        image: 'https://dcdza1qr0mu11.cloudfront.net/uploads/wp/2023/11/2-1.jpeg.webp',
+        propertyCount: 4,
+        slug: '/in/mumbai/'
       },
       {
-        id: 'mh-bkc',
-        name: 'BKC, Mumbai',
+        id: 'mumbai-chandivali',
+        name: 'Chandivali, Mumbai',
         countryCode: 'in',
-        state: 'Maharashtra',
-        image: 'https://www.pajasaapartments.com/wp-content/uploads/2019/09/Serviced-Apartments-in-BKC-Mumbai-by-PAJASA.jpeg',
-        propertyCount: 15,
-        slug: '/in/mumbai/bkc/',
+        image: 'https://dcdza1qr0mu11.cloudfront.net/uploads/wp/2019/04/2-BHK-Service-Apartments-in-Chandivali-Powai.jpeg.webp',
+        propertyCount: 3,
+        slug: '/in/mumbai/'
       },
       {
-        id: 'mh-hinjewadi',
-        name: 'Hinjewadi, Pune',
+        id: 'mumbai-goregaon',
+        name: 'Goregaon, Mumbai',
         countryCode: 'in',
-        state: 'Maharashtra',
-        image: 'https://www.pajasaapartments.com/wp-content/uploads/2019/09/Serviced-Apartments-in-Hinjewadi-Pune-by-PAJASA.jpeg',
-        propertyCount: 22,
-        slug: '/in/pune/hinjewadi/',
+        image: 'https://dcdza1qr0mu11.cloudfront.net/uploads/wp/2023/11/1-BHK-Serviced-Apartment-in-Goregaon.jpg.webp',
+        propertyCount: 3,
+        slug: '/in/mumbai/'
       },
       {
-        id: 'mh-baner',
-        name: 'Baner, Pune',
+        id: 'mumbai-thane',
+        name: 'Thane, Mumbai',
         countryCode: 'in',
-        state: 'Maharashtra',
-        image: 'https://dcdza1qr0mu11.cloudfront.net/uploads/wp/2024/06/Service-Apartments-in-Baner-Pune-by-PAJASA-1170x921.jpeg.webp',
-        propertyCount: 17,
-        slug: '/in/pune/baner/',
+        image: 'https://dcdza1qr0mu11.cloudfront.net/uploads/wp/2025/05/Service-Apartment-in-Mumbai-by-PAJASA-1170x921.webp.webp',
+        propertyCount: 3,
+        slug: '/in/mumbai/'
       },
       {
-        id: 'mh-kalyani-nagar',
-        name: 'Kalyani Nagar, Pune',
+        id: 'mumbai-bandra-east',
+        name: 'Bandra East, Mumbai',
         countryCode: 'in',
-        state: 'Maharashtra',
-        image: 'https://dcdza1qr0mu11.cloudfront.net/uploads/wp/2019/06/Service-Apartments-in-Kalyani-Nagar-Pune-400x314.jpeg.webp',
-        propertyCount: 14,
-        slug: '/in/pune/kalyani-nagar/',
+        image: 'https://dcdza1qr0mu11.cloudfront.net/uploads/wp/2019/03/2-BHK-Serviced-Apartment-BKC-Mumbai.jpeg.webp',
+        propertyCount: 2,
+        slug: '/in/mumbai/'
       },
       {
-        id: 'mh-balewadi',
-        name: 'Balewadi, Pune',
+        id: 'mumbai-bandra-west',
+        name: 'Bandra West, Mumbai',
         countryCode: 'in',
-        state: 'Maharashtra',
-        image: 'https://dcdza1qr0mu11.cloudfront.net/uploads/wp/2026/05/Service-Apartments-in-Balewadi-Pune-400x314.jpg.webp',
-        propertyCount: 11,
-        slug: '/in/pune/',
+        image: 'https://dcdza1qr0mu11.cloudfront.net/uploads/wp/2023/11/1-BHK-Service-Apartments-Bandra-West-Mumbai.jpg.webp',
+        propertyCount: 2,
+        slug: '/in/mumbai/'
       },
-    ],
+      {
+        id: 'mumbai-juhu',
+        name: 'Juhu, Mumbai',
+        countryCode: 'in',
+        image: 'https://dcdza1qr0mu11.cloudfront.net/uploads/wp/2023/12/1-BHK-Premium-Serviced-Apartment-in-Juhu-Mumbai.jpg.webp',
+        propertyCount: 2,
+        slug: '/in/mumbai/'
+      }
+    ]
   },
   {
     id: 'delhi-ncr',
@@ -204,226 +169,421 @@ export const STUDENT_CITIES_DATA: CountryAccommodation[] = [
     flag: '🏛️',
     cities: [
       {
-        id: 'ncr-delhi',
+        id: 'ncr-new-delhi',
         name: 'New Delhi',
         countryCode: 'in',
-        state: 'Delhi NCR',
         image: 'https://dcdza1qr0mu11.cloudfront.net/uploads/wp/2019/09/Service-Apartments-in-Delhi-by-PAJASA-1-1170x921.jpeg.webp',
-        propertyCount: 21,
-        slug: '/in/new-delhi/',
+        propertyCount: 20,
+        slug: '/in/new-delhi/'
       },
       {
         id: 'ncr-gurugram',
         name: 'Gurugram',
         countryCode: 'in',
-        state: 'Haryana',
         image: 'https://dcdza1qr0mu11.cloudfront.net/uploads/wp/2024/04/Service-Apartment-in-Gurugram-by-PAJASA.jpeg.webp',
         propertyCount: 16,
-        slug: '/in/gurugram/',
-      },
-      {
-        id: 'ncr-cybercity',
-        name: 'Cyber City, Gurgaon',
-        countryCode: 'in',
-        state: 'Haryana',
-        image: 'https://dcdza1qr0mu11.cloudfront.net/uploads/wp/2019/09/Serviced-Apartments-in-Cyber-City-Gurgaon-by-PAJASA.jpeg.webp',
-        propertyCount: 14,
-        slug: '/in/gurugram/',
+        slug: '/in/gurugram/'
       },
       {
         id: 'ncr-noida',
         name: 'Noida',
         countryCode: 'in',
-        state: 'Uttar Pradesh',
         image: 'https://dcdza1qr0mu11.cloudfront.net/uploads/wp/2019/09/Service-Apartments-in-Noida-by-PAJASA-1170x921.jpeg.webp',
-        propertyCount: 12,
-        slug: '/in/noida/',
+        propertyCount: 8,
+        slug: '/in/noida/'
       },
-    ],
+      {
+        id: 'new-delhi-nehru-place',
+        name: 'Nehru Place, New Delhi',
+        countryCode: 'in',
+        image: 'https://dcdza1qr0mu11.cloudfront.net/uploads/wp/2019/09/Service-Apartments-in-Delhi-by-PAJASA-1-1170x921.jpeg.webp',
+        propertyCount: 3,
+        slug: '/in/new-delhi/'
+      },
+      {
+        id: 'new-delhi-saket',
+        name: 'Saket, New Delhi',
+        countryCode: 'in',
+        image: 'https://dcdza1qr0mu11.cloudfront.net/uploads/wp/2019/04/3-BHK-Serviced-Apartments-in-Saket-Delhi.webp.webp',
+        propertyCount: 3,
+        slug: '/in/new-delhi/'
+      },
+      {
+        id: 'new-delhi-connaught-place',
+        name: 'Connaught Place, New Delhi',
+        countryCode: 'in',
+        image: 'https://dcdza1qr0mu11.cloudfront.net/uploads/wp/2023/10/11.jpeg.webp',
+        propertyCount: 2,
+        slug: '/in/new-delhi/'
+      },
+      {
+        id: 'new-delhi-defence-colony',
+        name: 'Defence Colony, New Delhi',
+        countryCode: 'in',
+        image: 'https://dcdza1qr0mu11.cloudfront.net/uploads/wp/2019/09/Service-Apartments-in-Delhi-by-PAJASA-1-1170x921.jpeg.webp',
+        propertyCount: 2,
+        slug: '/in/new-delhi/'
+      },
+      {
+        id: 'gurugram-dlf-phase-1',
+        name: 'DLF Phase 1, Gurugram',
+        countryCode: 'in',
+        image: 'https://dcdza1qr0mu11.cloudfront.net/uploads/wp/2024/03/1-BHK-Serviced-Apartments-in-Gurugram.jpg.webp',
+        propertyCount: 3,
+        slug: '/in/gurugram/'
+      },
+      {
+        id: 'gurugram-dlf-phase-2',
+        name: 'DLF Phase 2, Gurugram',
+        countryCode: 'in',
+        image: 'https://dcdza1qr0mu11.cloudfront.net/uploads/wp/2023/10/1-13.jpg.webp',
+        propertyCount: 1,
+        slug: '/in/gurugram/'
+      }
+    ]
   },
   {
-    id: 'karnataka',
-    name: 'Karnataka',
+    id: 'pune',
+    name: 'Pune',
+    code: 'in',
+    flag: '🏙️',
+    cities: [
+      {
+        id: 'pune-pune',
+        name: 'Pune',
+        countryCode: 'in',
+        image: 'https://dcdza1qr0mu11.cloudfront.net/uploads/wp/2023/11/Service-Apartments-in-Pune-by-PAJASA-1170x921.jpeg.webp',
+        propertyCount: 47,
+        slug: '/in/pune/'
+      },
+      {
+        id: 'pune-baner',
+        name: 'Baner, Pune',
+        countryCode: 'in',
+        image: 'https://dcdza1qr0mu11.cloudfront.net/uploads/wp/2023/10/7-4.jpg.webp',
+        propertyCount: 10,
+        slug: '/in/pune/'
+      },
+      {
+        id: 'pune-magarpatta',
+        name: 'Magarpatta, Pune',
+        countryCode: 'in',
+        image: 'https://dcdza1qr0mu11.cloudfront.net/uploads/wp/2023/11/Service-Apartments-in-Pune-by-PAJASA-1170x921.jpeg.webp',
+        propertyCount: 9,
+        slug: '/in/pune/'
+      },
+      {
+        id: 'pune-aundh',
+        name: 'Aundh, Pune',
+        countryCode: 'in',
+        image: 'https://dcdza1qr0mu11.cloudfront.net/uploads/wp/2023/11/Service-Apartments-in-Pune-by-PAJASA-1170x921.jpeg.webp',
+        propertyCount: 4,
+        slug: '/in/pune/'
+      },
+      {
+        id: 'pune-hadapsar',
+        name: 'Hadapsar, Pune',
+        countryCode: 'in',
+        image: 'https://dcdza1qr0mu11.cloudfront.net/uploads/wp/2023/11/Service-Apartments-in-Pune-by-PAJASA-1170x921.jpeg.webp',
+        propertyCount: 4,
+        slug: '/in/pune/'
+      },
+      {
+        id: 'pune-kalyani-nagar',
+        name: 'Kalyani Nagar, Pune',
+        countryCode: 'in',
+        image: 'https://dcdza1qr0mu11.cloudfront.net/uploads/wp/2019/06/2-BHK-Service-Apartments-in-Kalyani-Nagar.jpeg.webp',
+        propertyCount: 4,
+        slug: '/in/pune/'
+      },
+      {
+        id: 'pune-hinjewadi',
+        name: 'Hinjewadi, Pune',
+        countryCode: 'in',
+        image: 'https://dcdza1qr0mu11.cloudfront.net/uploads/wp/2019/04/service-apartments-in-Hinjewadi-Pune-by-PAJASA.jpg.webp',
+        propertyCount: 3,
+        slug: '/in/pune/'
+      },
+      {
+        id: 'pune-kharadi',
+        name: 'Kharadi, Pune',
+        countryCode: 'in',
+        image: 'https://dcdza1qr0mu11.cloudfront.net/uploads/wp/2023/11/Service-Apartments-in-Pune-by-PAJASA-1170x921.jpeg.webp',
+        propertyCount: 3,
+        slug: '/in/pune/'
+      },
+      {
+        id: 'pune-koregaon-park',
+        name: 'Koregaon Park, Pune',
+        countryCode: 'in',
+        image: 'https://dcdza1qr0mu11.cloudfront.net/uploads/wp/2024/03/1-BHK-Serviced-Apartments-Koregaon-Park-Pune.jpg.webp',
+        propertyCount: 3,
+        slug: '/in/pune/'
+      }
+    ]
+  },
+  {
+    id: 'bengaluru',
+    name: 'Bengaluru',
     code: 'in',
     flag: '💻',
     cities: [
       {
-        id: 'ka-bengaluru',
+        id: 'blr-bengaluru',
         name: 'Bengaluru',
         countryCode: 'in',
-        state: 'Karnataka',
         image: 'https://dcdza1qr0mu11.cloudfront.net/uploads/wp/2025/09/Service-PAJASA-Apartments-in-Bangalore-by-PAJASA.webp-1170x921.webp.webp',
         propertyCount: 99,
-        slug: '/in/bengaluru/',
+        slug: '/in/bengaluru/'
       },
       {
-        id: 'ka-whitefield',
-        name: 'Whitefield',
+        id: 'bengaluru-koramangala',
+        name: 'Koramangala, Bengaluru',
         countryCode: 'in',
-        state: 'Karnataka',
-        image: 'https://dcdza1qr0mu11.cloudfront.net/uploads/wp/2026/05/Service-Apartments-in-Whitefield-Bengaluru-PAJASA-1170x921.jpg.webp',
-        propertyCount: 24,
-        slug: '/in/bengaluru/whitefield/',
-      },
-      {
-        id: 'ka-koramangala',
-        name: 'Koramangala',
-        countryCode: 'in',
-        state: 'Karnataka',
         image: 'https://dcdza1qr0mu11.cloudfront.net/uploads/wp/2025/09/Service-PAJASA-Apartments-in-Bangalore-by-PAJASA.webp-1170x921.webp.webp',
-        propertyCount: 18,
-        slug: '/in/bengaluru/koramangala/',
+        propertyCount: 20,
+        slug: '/in/bengaluru/'
       },
       {
-        id: 'ka-indiranagar',
-        name: 'Indiranagar',
+        id: 'bengaluru-electronic-city',
+        name: 'Electronic City, Bengaluru',
         countryCode: 'in',
-        state: 'Karnataka',
-        image: 'https://dcdza1qr0mu11.cloudfront.net/uploads/wp/2026/05/Service-Apartments-in-Whitefield-Bengaluru-PAJASA-1170x921.jpg.webp',
+        image: 'https://dcdza1qr0mu11.cloudfront.net/uploads/wp/2025/09/Service-PAJASA-Apartments-in-Bangalore-by-PAJASA.webp-1170x921.webp.webp',
         propertyCount: 15,
-        slug: '/in/bengaluru/indiranagar/',
+        slug: '/in/bengaluru/'
       },
       {
-        id: 'ka-electronic-city',
-        name: 'Electronic City',
+        id: 'bengaluru-hebbal',
+        name: 'Hebbal, Bengaluru',
         countryCode: 'in',
-        state: 'Karnataka',
         image: 'https://dcdza1qr0mu11.cloudfront.net/uploads/wp/2025/09/Service-PAJASA-Apartments-in-Bangalore-by-PAJASA.webp-1170x921.webp.webp',
-        propertyCount: 16,
-        slug: '/in/bengaluru/electronic-city/',
+        propertyCount: 7,
+        slug: '/in/bengaluru/'
       },
-    ],
+      {
+        id: 'bengaluru-hsr-layout',
+        name: 'HSR Layout, Bengaluru',
+        countryCode: 'in',
+        image: 'https://dcdza1qr0mu11.cloudfront.net/uploads/wp/2025/09/Service-PAJASA-Apartments-in-Bangalore-by-PAJASA.webp-1170x921.webp.webp',
+        propertyCount: 7,
+        slug: '/in/bengaluru/'
+      },
+      {
+        id: 'bengaluru-indiranagar',
+        name: 'Indiranagar, Bengaluru',
+        countryCode: 'in',
+        image: 'https://dcdza1qr0mu11.cloudfront.net/uploads/wp/2025/09/Service-PAJASA-Apartments-in-Bangalore-by-PAJASA.webp-1170x921.webp.webp',
+        propertyCount: 5,
+        slug: '/in/bengaluru/'
+      },
+      {
+        id: 'bengaluru-kundalahalli',
+        name: 'Kundalahalli, Bengaluru',
+        countryCode: 'in',
+        image: 'https://dcdza1qr0mu11.cloudfront.net/uploads/wp/2025/09/Service-PAJASA-Apartments-in-Bangalore-by-PAJASA.webp-1170x921.webp.webp',
+        propertyCount: 5,
+        slug: '/in/bengaluru/'
+      },
+      {
+        id: 'bengaluru-marathahalli',
+        name: 'Marathahalli, Bengaluru',
+        countryCode: 'in',
+        image: 'https://dcdza1qr0mu11.cloudfront.net/uploads/wp/2025/09/Service-PAJASA-Apartments-in-Bangalore-by-PAJASA.webp-1170x921.webp.webp',
+        propertyCount: 5,
+        slug: '/in/bengaluru/'
+      }
+    ]
   },
   {
-    id: 'telangana',
-    name: 'Telangana',
+    id: 'hyderabad',
+    name: 'Hyderabad',
     code: 'in',
     flag: '🏢',
     cities: [
       {
-        id: 'tg-hyderabad',
+        id: 'hyd-hyderabad',
         name: 'Hyderabad',
         countryCode: 'in',
-        state: 'Telangana',
         image: 'https://dcdza1qr0mu11.cloudfront.net/uploads/wp/2019/09/Service-Apartments-in-Hyderabad-by-PAJASA-1170x921.jpeg.webp',
-        propertyCount: 14,
-        slug: '/in/hyderabad/',
+        propertyCount: 4,
+        slug: '/in/hyderabad/'
       },
       {
-        id: 'tg-hitech',
-        name: 'HITEC City',
+        id: 'hyderabad-kondapur',
+        name: 'Kondapur, Hyderabad',
         countryCode: 'in',
-        state: 'Telangana',
-        image: 'https://www.pajasaapartments.com/wp-content/uploads/2019/09/Serviced-Apartments-in-Hitech-City-Hyderabad.jpeg',
-        propertyCount: 19,
-        slug: '/in/hyderabad/hitech-city/',
+        image: 'https://dcdza1qr0mu11.cloudfront.net/uploads/wp/2019/04/Premium-Service-Apartment-in-Kondapur-Hyderabad-2.jpg.webp',
+        propertyCount: 2,
+        slug: '/in/hyderabad/'
       },
       {
-        id: 'tg-gachibowli',
-        name: 'Gachibowli',
+        id: 'hyderabad-gachibowli',
+        name: 'Gachibowli, Hyderabad',
         countryCode: 'in',
-        state: 'Telangana',
-        image: 'https://www.pajasaapartments.com/wp-content/uploads/2019/09/Serviced-Apartments-in-Gachibowli-Hyderabad-by-PAJASA.jpeg',
-        propertyCount: 16,
-        slug: '/in/hyderabad/gachibowli/',
+        image: 'https://dcdza1qr0mu11.cloudfront.net/uploads/wp/2023/11/4.jpg.webp',
+        propertyCount: 1,
+        slug: '/in/hyderabad/'
       },
       {
-        id: 'tg-kondapur',
-        name: 'Kondapur',
+        id: 'hyderabad-jubilee-hills',
+        name: 'Jubilee Hills, Hyderabad',
         countryCode: 'in',
-        state: 'Telangana',
-        image: 'https://dcdza1qr0mu11.cloudfront.net/uploads/wp/2024/04/Service-Apartments-in-Kondapur-Hyderabad-1170x921.jpeg.webp',
-        propertyCount: 12,
-        slug: '/in/hyderabad/kondapur/',
-      },
-      {
-        id: 'tg-madhapur',
-        name: 'Madhapur',
-        countryCode: 'in',
-        state: 'Telangana',
-        image: 'https://dcdza1qr0mu11.cloudfront.net/uploads/wp/2019/09/Service-Apartments-in-Hyderabad-by-PAJASA-1170x921.jpeg.webp',
-        propertyCount: 15,
-        slug: '/in/hyderabad/madhapur/',
-      },
-    ],
+        image: 'https://dcdza1qr0mu11.cloudfront.net/uploads/wp/2019/04/Service-Apartments-in-Jubilee-Hills-Hyderabad.jpg.webp',
+        propertyCount: 1,
+        slug: '/in/hyderabad/'
+      }
+    ]
   },
   {
-    id: 'tamil-nadu',
-    name: 'Tamil Nadu',
+    id: 'chennai',
+    name: 'Chennai',
     code: 'in',
     flag: '🌴',
     cities: [
       {
-        id: 'tn-chennai',
+        id: 'chn-chennai',
         name: 'Chennai',
         countryCode: 'in',
-        state: 'Tamil Nadu',
         image: 'https://dcdza1qr0mu11.cloudfront.net/uploads/wp/2019/09/Service-Apartments-in-Chennai-by-PAJASA-1170x921.jpeg.webp',
         propertyCount: 11,
-        slug: '/in/chennai/',
+        slug: '/in/chennai/'
       },
       {
-        id: 'tn-tnagar',
-        name: 'T Nagar',
+        id: 'chennai-adyar',
+        name: 'Adyar, Chennai',
         countryCode: 'in',
-        state: 'Tamil Nadu',
-        image: 'https://dcdza1qr0mu11.cloudfront.net/uploads/wp/2019/09/Service-Apartments-in-T-Nagar-Chennai-by-PAJASA.jpeg.webp',
-        propertyCount: 10,
-        slug: '/in/chennai/',
+        image: 'https://dcdza1qr0mu11.cloudfront.net/uploads/wp/2023/11/IMG_2822-scaled.jpg.webp',
+        propertyCount: 2,
+        slug: '/in/chennai/'
       },
       {
-        id: 'tn-annanagar',
-        name: 'Anna Nagar',
+        id: 'chennai-t-nagar',
+        name: 'T Nagar, Chennai',
         countryCode: 'in',
-        state: 'Tamil Nadu',
-        image: 'https://dcdza1qr0mu11.cloudfront.net/uploads/wp/2026/05/Service-Apartments-in-Anna-Nagar-Chennai-by-PAJASA-1170x921.jpg.webp',
-        propertyCount: 8,
-        slug: '/in/chennai/anna-nagar/',
-      },
-      {
-        id: 'tn-nungambakkam',
-        name: 'Nungambakkam',
-        countryCode: 'in',
-        state: 'Tamil Nadu',
         image: 'https://dcdza1qr0mu11.cloudfront.net/uploads/wp/2019/09/Service-Apartments-in-Chennai-by-PAJASA-1170x921.jpeg.webp',
-        propertyCount: 9,
-        slug: '/in/chennai/nungambakkam/',
+        propertyCount: 2,
+        slug: '/in/chennai/'
       },
-    ],
+      {
+        id: 'chennai-anna-nagar',
+        name: 'Anna Nagar, Chennai',
+        countryCode: 'in',
+        image: 'https://dcdza1qr0mu11.cloudfront.net/uploads/wp/2023/11/luxuary-serviced-apartments-anna-nagar-channai.jpg.webp',
+        propertyCount: 1,
+        slug: '/in/chennai/'
+      },
+      {
+        id: 'chennai-egmore',
+        name: 'Egmore, Chennai',
+        countryCode: 'in',
+        image: 'https://dcdza1qr0mu11.cloudfront.net/uploads/wp/2019/09/Service-Apartments-in-Chennai-by-PAJASA-1170x921.jpeg.webp',
+        propertyCount: 1,
+        slug: '/in/chennai/'
+      },
+      {
+        id: 'chennai-ekkatuthangal',
+        name: 'Ekkatuthangal, Chennai',
+        countryCode: 'in',
+        image: 'https://dcdza1qr0mu11.cloudfront.net/uploads/wp/2019/09/Service-Apartments-in-Chennai-by-PAJASA-1170x921.jpeg.webp',
+        propertyCount: 1,
+        slug: '/in/chennai/'
+      },
+      {
+        id: 'chennai-koyambedu',
+        name: 'Koyambedu, Chennai',
+        countryCode: 'in',
+        image: 'https://dcdza1qr0mu11.cloudfront.net/uploads/wp/2023/11/luxuary-service-apartment-Koyambedu-channai.jpg.webp',
+        propertyCount: 1,
+        slug: '/in/chennai/'
+      },
+      {
+        id: 'chennai-nungambakkam',
+        name: 'Nungambakkam, Chennai',
+        countryCode: 'in',
+        image: 'https://dcdza1qr0mu11.cloudfront.net/uploads/wp/2019/09/Service-Apartments-in-Chennai-by-PAJASA-1170x921.jpeg.webp',
+        propertyCount: 1,
+        slug: '/in/chennai/'
+      },
+      {
+        id: 'chennai-thuraipakkam',
+        name: 'Thuraipakkam, Chennai',
+        countryCode: 'in',
+        image: 'https://dcdza1qr0mu11.cloudfront.net/uploads/wp/2019/09/Service-Apartments-in-Chennai-by-PAJASA-1170x921.jpeg.webp',
+        propertyCount: 1,
+        slug: '/in/chennai/'
+      }
+    ]
   },
   {
-    id: 'west-bengal',
-    name: 'West Bengal',
+    id: 'kolkata',
+    name: 'Kolkata',
     code: 'in',
     flag: '🎭',
     cities: [
       {
-        id: 'wb-kolkata',
+        id: 'kol-kolkata',
         name: 'Kolkata',
         countryCode: 'in',
-        state: 'West Bengal',
         image: 'https://dcdza1qr0mu11.cloudfront.net/uploads/wp/2026/05/Service-apartments-in-Salt-Lake-Kolkata.webp.webp',
-        propertyCount: 10,
-        slug: '/in/kolkata/',
+        propertyCount: 17,
+        slug: '/in/kolkata/'
       },
       {
-        id: 'wb-saltlake',
-        name: 'Salt Lake City',
+        id: 'kolkata-alipore',
+        name: 'Alipore, Kolkata',
         countryCode: 'in',
-        state: 'West Bengal',
         image: 'https://dcdza1qr0mu11.cloudfront.net/uploads/wp/2026/05/Service-apartments-in-Salt-Lake-Kolkata.webp.webp',
-        propertyCount: 9,
-        slug: '/in/kolkata/salt-lake-city/',
+        propertyCount: 1,
+        slug: '/in/kolkata/'
       },
       {
-        id: 'wb-newtown',
-        name: 'New Town',
+        id: 'kolkata-ballygunge',
+        name: 'Ballygunge, Kolkata',
         countryCode: 'in',
-        state: 'West Bengal',
         image: 'https://dcdza1qr0mu11.cloudfront.net/uploads/wp/2026/05/Service-apartments-in-Salt-Lake-Kolkata.webp.webp',
-        propertyCount: 8,
-        slug: '/in/kolkata/new-town/',
+        propertyCount: 1,
+        slug: '/in/kolkata/'
       },
-    ],
-  },
+      {
+        id: 'kolkata-behala',
+        name: 'Behala, Kolkata',
+        countryCode: 'in',
+        image: 'https://dcdza1qr0mu11.cloudfront.net/uploads/wp/2026/05/Service-apartments-in-Salt-Lake-Kolkata.webp.webp',
+        propertyCount: 1,
+        slug: '/in/kolkata/'
+      },
+      {
+        id: 'kolkata-garia',
+        name: 'Garia, Kolkata',
+        countryCode: 'in',
+        image: 'https://dcdza1qr0mu11.cloudfront.net/uploads/wp/2026/05/Service-apartments-in-Salt-Lake-Kolkata.webp.webp',
+        propertyCount: 1,
+        slug: '/in/kolkata/'
+      },
+      {
+        id: 'kolkata-gariahat',
+        name: 'Gariahat, Kolkata',
+        countryCode: 'in',
+        image: 'https://dcdza1qr0mu11.cloudfront.net/uploads/wp/2026/05/Service-apartments-in-Salt-Lake-Kolkata.webp.webp',
+        propertyCount: 1,
+        slug: '/in/kolkata/'
+      },
+      {
+        id: 'kolkata-howrah',
+        name: 'Howrah, Kolkata',
+        countryCode: 'in',
+        image: 'https://dcdza1qr0mu11.cloudfront.net/uploads/wp/2026/05/Service-apartments-in-Salt-Lake-Kolkata.webp.webp',
+        propertyCount: 1,
+        slug: '/in/kolkata/'
+      },
+      {
+        id: 'kolkata-kolkata-airport',
+        name: 'Kolkata Airport, Kolkata',
+        countryCode: 'in',
+        image: 'https://dcdza1qr0mu11.cloudfront.net/uploads/wp/2026/05/Service-apartments-in-Salt-Lake-Kolkata.webp.webp',
+        propertyCount: 1,
+        slug: '/in/kolkata/'
+      }
+    ]
+  }
 ];
