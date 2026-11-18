@@ -91,3 +91,19 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .wp-content img { max-width: 100%; height: auto; }
 .wp-content table { border-collapse: collapse; margin: 0 0 1rem; }
 .wp-content td, .wp-content th { border: 1px solid #E8E8E8; padding: 0.5rem; }
+
+/* City page content */
+.city-prose p { margin: 0 0 0.9rem; }
+.city-prose p:last-child { margin-bottom: 0; }
+.city-prose strong { font-weight: 700; color: #3F3F3F; }
+.city-prose a { color: #E08905; text-decoration: underline; text-underline-offset: 2px; }
+.city-prose a:hover { color: #F59A16; }
+.city-prose ul { list-style: disc; padding-left: 1.25rem; margin: 0 0 0.9rem; }
+.city-prose ol { list-style: decimal; padding-left: 1.25rem; margin: 0 0 0.9rem; }
+.city-prose li { margin: 0.3rem 0; }
+.city-prose h4, .city-prose h5 { font-weight: 700; margin: 1rem 0 0.4rem; }
+.city-prose img { max-width: 100%; height: auto; border-radius: 1rem; margin: 0.5rem 0; }
+.city-table table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.city-table th, .city-table thead td { background: #FAFAF8; font-weight: 700; text-align: left; border-bottom: 2px solid #3F3F3F; }
+.city-table th, .city-table td { padding: 0.75rem 1rem; border-bottom: 1px solid #E8E8E8; vertical-align: top; }
+.city-table tr:last-child td { border-bottom: 0; }
