@@ -1,0 +1,26 @@
+# PAJASA Apartments
+
+> PAJASA Stay Solutions offers fully furnished serviced apartments for corporate housing, business travel and extended stays across major Indian cities and global hubs.
+
+PAJASA provides executive serviced apartments with hotel-style amenities (housekeeping, Wi-Fi, kitchen, security) for companies, relocating employees, project teams and families. Stays range from a few nights to long-term corporate leases.
+
+## Main pages
+
+- [Home](https://www.pajasaapartments.com/): Overview of PAJASA serviced apartments
+- [About Us](https://www.pajasaapartments.com/about-us/): Company background and mission
+- [Services](https://www.pajasaapartments.com/services/): Serviced apartment and corporate housing services
+- [Corporate Housing](https://www.pajasaapartments.com/corporate/): Solutions for companies and long-stay business travellers
+- [Contact](https://www.pajasaapartments.com/contact/): Booking enquiries and contact details
+- [Blog](https://www.pajasaapartments.com/blog/): Guides on serviced apartments, cities and business travel
+
+## Serviced apartments by city
+
+- [Mumbai](https://www.pajasaapartments.com/in/mumbai/): Serviced apartments in Powai, BKC, Andheri, Bandra, Worli and more
+- [Pune](https://www.pajasaapartments.com/in/pune/): Serviced apartments in Pune
+- [New Delhi](https://www.pajasaapartments.com/in/new-delhi/): Serviced apartments in New Delhi
+- [Gurugram](https://www.pajasaapartments.com/in/gurugram/): Serviced apartments in Gurugram
+- [Noida](https://www.pajasaapartments.com/in/noida/): Serviced apartments in Noida
+- [Bengaluru](https://www.pajasaapartments.com/in/bengaluru/): Serviced apartments in Bengaluru
+- [Hyderabad](https://www.pajasaapartments.com/in/hyderabad/): Serviced apartments in Hitech City, Gachibowli, Kondapur and more
+- [Chennai](https://www.pajasaapartments.com/in/chennai/): Serviced apartments in Chennai
+- [Goa](https://www.pajasaapartments.com/in/goa/): Serviced apartments in Goa

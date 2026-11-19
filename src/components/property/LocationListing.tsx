@@ -242,7 +242,15 @@ export function LocationListing({ countryCode: rawCountryCode, slug, city, initi
         </div>
       </div>
 
-      {city && <CityContent city={city} />}
+      {city && (
+        <CityContent
+          city={city}
+          stats={initialProperties ? {
+            count: initialProperties.length,
+            minPrice: Math.min(...initialProperties.map((p) => p.pricePerNight).filter((n) => n > 0)) || undefined,
+          } : undefined}
+        />
+      )}
 
       <BookingModal
         isOpen={bookingModalOpen}
