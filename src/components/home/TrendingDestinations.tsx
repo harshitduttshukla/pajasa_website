@@ -41,6 +41,7 @@ export function TrendingDestinations() {
                 alt={city.name}
                 className="w-full h-full object-cover img-zoom filter brightness-90"
               />
+              <Link href={`/in/${city.slug}/`} aria-label={`Service apartments in ${city.name}`} className="absolute inset-0 z-20" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
 
               <div className="absolute top-4 left-4 z-10">
@@ -51,11 +52,9 @@ export function TrendingDestinations() {
               </div>
 
               <div className="absolute bottom-0 left-0 right-0 p-5 z-10 space-y-1">
-                <Link href={`/in/${city.slug}/`}>
-                  <h3 className="text-xl font-extrabold text-[#F59A16]! drop-shadow-md group-hover:text-white! transition-colors">
-                    {city.name}
-                  </h3>
-                </Link>
+                <h3 className="text-xl font-extrabold text-[#F59A16]! drop-shadow-md group-hover:text-white! transition-colors">
+                  {city.name}
+                </h3>
                 <p className="text-xs text-slate-200 line-clamp-1">{city.description}</p>
               </div>
             </motion.div>
