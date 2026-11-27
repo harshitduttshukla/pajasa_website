@@ -53,14 +53,14 @@ export function FeaturedProperties() {
   // One property per city/location
   const featuredList = properties
     .filter((p, i, arr) => arr.findIndex((q) => (q.city || '').toLowerCase() === (p.city || '').toLowerCase()) === i)
-    .slice(0, 4);
+    .slice(0, 3);
 
   return (
     <section className="py-16 sm:py-20 bg-[#FAFAF8] relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10">
+        <div className="flex flex-col items-center text-center gap-4 mb-10">
           <div className="space-y-1">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#3F3F3F] tracking-tight">
               Premium Service Apartments
@@ -72,7 +72,7 @@ export function FeaturedProperties() {
 
           <Link
             href="/properties"
-            className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-white border border-[#E8E8E8] hover:border-[#F59A16] text-xs font-bold text-[#3F3F3F] hover:text-[#F59A16] transition-all shadow-xs shrink-0 self-start sm:self-auto"
+            className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-white border border-[#E8E8E8] hover:border-[#F59A16] text-xs font-bold text-[#3F3F3F] hover:text-[#F59A16] transition-all shadow-xs shrink-0"
           >
             <span>VIEW ALL APARTMENTS</span>
             <ArrowRight className="w-3.5 h-3.5 text-[#F59A16]" />
@@ -106,7 +106,7 @@ export function FeaturedProperties() {
 
         {/* 4-Column Horizontal Desktop Grid */}
         {!isLoading && !error && featuredList.length > 0 && (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {featuredList.map((property, idx) => (
               <motion.div
                 key={property.id}

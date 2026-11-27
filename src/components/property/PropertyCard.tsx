@@ -62,10 +62,10 @@ export function PropertyCard({ property, badgeText, onBookNow }: PropertyCardPro
           </h3>
         </Link>
 
-        <div className="flex items-end justify-between gap-3 pt-2 mt-auto">
+        <div className="flex items-center justify-between gap-3 pt-2 mt-auto">
           <div className="flex items-baseline gap-1.5">
             <span className="text-2xl font-extrabold text-[#1f2937]">{formatCurrency(property.pricePerNight)}</span>
-            <span className="text-sm text-[#666666]">/ per night</span>
+            <span className="text-sm text-[#666666] whitespace-nowrap">/ per night</span>
           </div>
           <Link
             href={href}
@@ -78,17 +78,17 @@ export function PropertyCard({ property, badgeText, onBookNow }: PropertyCardPro
       </div>
 
       {/* Specs */}
-      <div className="px-5 py-3.5 border-t border-[#E8E8E8] bg-[#FAFAF8] grid grid-cols-3 divide-x divide-[#E8E8E8] text-sm text-[#3F3F3F] font-medium">
-        <span className="flex items-center justify-center gap-1.5">
-          <Home className="w-4 h-4 text-slate-500" strokeWidth={1.5} />
+      <div className="px-5 py-3.5 border-t border-[#E8E8E8] bg-[#FAFAF8] grid grid-cols-3 divide-x divide-[#E8E8E8] text-xs sm:text-sm text-[#3F3F3F] font-medium">
+        <span className="flex items-center justify-center gap-1.5 whitespace-nowrap px-1">
+          <Home className="w-4 h-4 shrink-0 text-slate-500" strokeWidth={1.5} />
           {plural(property.bedrooms || 1, 'Bedroom')}
         </span>
-        <span className="flex items-center justify-center gap-1.5">
-          <Bath className="w-4 h-4 text-slate-500" strokeWidth={1.5} />
+        <span className="flex items-center justify-center gap-1.5 whitespace-nowrap px-1">
+          <Bath className="w-4 h-4 shrink-0 text-slate-500" strokeWidth={1.5} />
           {plural(property.bathrooms || 1, 'Bath')}
         </span>
-        <span className="flex items-center justify-center gap-1.5">
-          <Users className="w-4 h-4 text-slate-500" strokeWidth={1.5} />
+        <span className="flex items-center justify-center gap-1.5 whitespace-nowrap px-1">
+          <Users className="w-4 h-4 shrink-0 text-slate-500" strokeWidth={1.5} />
           {plural(property.maxGuests || 2, 'Guest')}
         </span>
       </div>
