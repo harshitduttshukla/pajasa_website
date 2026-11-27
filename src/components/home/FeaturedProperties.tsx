@@ -24,7 +24,7 @@ export function FeaturedProperties() {
       try {
         setIsLoading(true);
         setError(null);
-        const res = await fetchProperties({ limit: 8 });
+        const res = await fetchProperties({ limit: 60 });
         if (isMounted) {
           const transformed = res.items.map(transformBackendProperty);
           setProperties(transformed);
@@ -50,7 +50,10 @@ export function FeaturedProperties() {
     setBookingModalOpen(true);
   };
 
-  const featuredList = properties.slice(0, 4);
+  // One property per city/location
+  const featuredList = properties
+    .filter((p, i, arr) => arr.findIndex((q) => (q.city || '').toLowerCase() === (p.city || '').toLowerCase()) === i)
+    .slice(0, 4);
 
   return (
     <section className="py-16 sm:py-20 bg-[#FAFAF8] relative">
@@ -60,10 +63,10 @@ export function FeaturedProperties() {
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10">
           <div className="space-y-1">
             <span className="block text-xs font-extrabold tracking-wider text-[#F59A16] uppercase">
-              FEATURED APARTMENTS
+              PREMIUM SERVICE APARTMENTS
             </span>
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#3F3F3F] tracking-tight">
-              Handpicked Stays for You
+              Premium Service Apartments
             </h2>
             <p className="text-xs sm:text-sm text-[#666666] font-normal">
               Premium apartments with the best amenities for your comfortable stay.

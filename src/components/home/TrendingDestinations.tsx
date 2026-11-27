@@ -15,10 +15,10 @@ export function TrendingDestinations() {
         <div className="text-center max-w-2xl mx-auto space-y-2">
           <span className="px-3.5 py-1 rounded-full bg-orange-50 border border-orange-200 text-[#F59A16] text-xs font-extrabold tracking-wider uppercase inline-flex items-center gap-1.5">
             <Compass className="w-3.5 h-3.5" />
-            TOP BUSINESS HUBS
+            TOP CITIES
           </span>
           <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-[#3F3F3F]">
-            Trending Destinations
+            Top Cities
           </h2>
           <p className="text-xs sm:text-sm text-[#666666] font-normal leading-relaxed">
             Serviced apartments located right next to India&apos;s major IT parks, financial districts, and business corridors.
@@ -47,7 +47,7 @@ export function TrendingDestinations() {
               <div className="absolute top-4 left-4 z-10">
                 <span className="px-3 py-1 rounded-md bg-[#F59A16] text-[#3F3F3F] text-[10px] font-extrabold flex items-center gap-1">
                   <Building className="w-3.5 h-3.5" />
-                  {city.propertyCount} Stays
+                  {city.propertyCount} Properties
                 </span>
               </div>
 
