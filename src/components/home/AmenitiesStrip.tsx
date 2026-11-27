@@ -3,22 +3,22 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import {
-  ArrowLeftRight, CookingPot, FileText, Heart, Monitor, RefreshCw, ShieldCheck, Sparkles, Sun, Tv, Wifi, Zap,
+  AirVent, Armchair, Coffee, CookingPot, FileText, Monitor, ShieldCheck, Sparkles, UserCheck, WashingMachine, Wifi, Zap,
 } from 'lucide-react';
 
 const AMENITIES = [
-  { icon: Wifi, title: 'High-Speed Wi-Fi', description: 'Dedicated Fiber Broadband' },
-  { icon: CookingPot, title: 'Equipped Kitchen', description: 'Hob, Fridge, Microwave & Cookware' },
-  { icon: Sparkles, title: 'Daily Housekeeping', description: 'Linen Change & Sanitization' },
-  { icon: ShieldCheck, title: '24/7 Security & CCTV', description: 'Gated Corporate Societies' },
-  { icon: Monitor, title: 'Dedicated Workspace', description: 'Ergonomic Desk & Chair' },
-  { icon: Tv, title: 'Smart LED TV', description: 'OTT Apps & HD Channels' },
-  { icon: RefreshCw, title: 'Washing Machine', description: 'In-Apartment Laundry & Iron' },
-  { icon: Sun, title: 'Split Air Conditioning', description: 'Climate Control in All Rooms' },
-  { icon: Zap, title: '100% Power Backup', description: 'Uninterrupted Work & Comfort' },
-  { icon: ArrowLeftRight, title: 'Reserved Parking', description: 'Covered Resident Car Park' },
-  { icon: Heart, title: 'Clubhouse & Gym', description: 'Select Luxury Complexes' },
-  { icon: FileText, title: 'GST Corporate Billing', description: 'Compliant Tax Invoices' },
+  { icon: Armchair, title: 'Fully furnished', description: 'Living area, bedrooms, wardrobes and quality linen.' },
+  { icon: CookingPot, title: 'Equipped kitchen', description: 'Cook yourself, or have the caretaker prepare homely meals.' },
+  { icon: Wifi, title: 'High-speed Wi-Fi', description: 'Free internet for work from home.' },
+  { icon: AirVent, title: 'Air conditioning and TV', description: 'AC and a flat-screen or Smart TV in the bedrooms.' },
+  { icon: WashingMachine, title: 'Washing machine and fridge', description: 'Laundry and food storage at home.' },
+  { icon: Sparkles, title: 'Housekeeping', description: 'Daily or weekly cleaning and linen changes.' },
+  { icon: UserCheck, title: 'Dedicated caretaker', description: 'One point of contact for help at any hour.' },
+  { icon: ShieldCheck, title: '24/7 security', description: 'CCTV and controlled access in the building.' },
+  { icon: Zap, title: 'Power backup', description: 'Keeps lights, Wi-Fi and cooling running.' },
+  { icon: Coffee, title: 'Complimentary breakfast', description: 'Available in PAJASA apartments; confirm on each listing.' },
+  { icon: Monitor, title: 'Dedicated workspace', description: 'A desk and chair so you can work comfortably from home.' },
+  { icon: FileText, title: 'GST corporate billing', description: 'GST-compliant invoices for company bookings.' },
 ];
 
 export function AmenitiesStrip() {
@@ -42,7 +42,7 @@ export function AmenitiesStrip() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: (idx % 4) * 0.06 }}
-                className="flex items-center gap-4 p-5 rounded-2xl bg-white border border-[#E8E8E8] shadow-xs hover:shadow-md hover:border-[#F59A16]/40 transition-all"
+                className="flex items-start gap-4 p-5 rounded-2xl bg-white border border-[#E8E8E8] shadow-xs hover:shadow-md hover:border-[#F59A16]/40 transition-all"
               >
                 <div className="w-12 h-12 rounded-xl bg-orange-50 flex items-center justify-center shrink-0">
                   <Icon className="w-5 h-5 text-[#F59A16]" strokeWidth={1.75} />
