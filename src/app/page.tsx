@@ -20,10 +20,10 @@ export default function HomePage() {
     <div className="flex flex-col min-h-screen bg-[#FAFAF8] overflow-x-hidden">
       <HeroSection />
       <WhyEnterprisesChooseUs />
-      <FeaturedProperties />
       <TrendingDestinations />
       <TopBusinessLocations />
       <ExploreTopCities />
+      <FeaturedProperties />
       <WhyChooseAndCalc />
       <AmenitiesStrip />
       <ClientLogos />
