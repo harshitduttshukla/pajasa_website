@@ -3,7 +3,6 @@
 import React from 'react';
 import { HeroSection } from '@/components/home/HeroSection';
 import { AmenitiesStrip } from '@/components/home/AmenitiesStrip';
-import { StatsAndTestimonial } from '@/components/home/StatsAndTestimonial';
 import { FeaturedProperties } from '@/components/home/FeaturedProperties';
 import { TopBusinessLocations } from '@/components/home/TopBusinessLocations';
 import { WhyChooseAndCalc } from '@/components/home/WhyChooseAndCalc';
@@ -20,19 +19,18 @@ export default function HomePage() {
   return (
     <div className="flex flex-col min-h-screen bg-[#FAFAF8] overflow-x-hidden">
       <HeroSection />
+      <WhyEnterprisesChooseUs />
       <FeaturedProperties />
       <TrendingDestinations />
       <TopBusinessLocations />
+      <ExploreTopCities />
       <WhyChooseAndCalc />
       <AmenitiesStrip />
-      <StatsAndTestimonial />
-      <ExploreTopCities />
-      <WhyEnterprisesChooseUs />
       <ClientLogos />
       <MediaFootprint />
       <BlogSection />
-      <FaqSection />
       <SeoArticles />
+      <FaqSection />
     </div>
   );
 }

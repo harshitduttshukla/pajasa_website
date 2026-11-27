@@ -59,13 +59,13 @@ export function SearchCard() {
         <div className="flex-1 flex items-center gap-3 px-4 py-2">
           <Building2 className="w-5 h-5 text-[#3F3F3F] shrink-0" strokeWidth={1.75} />
           <select
-            aria-label="Select Location"
+            aria-label="Select Area"
             value={location}
             onChange={(e) => setLocation(e.target.value)}
             disabled={!citySlug}
             className="w-full bg-transparent text-sm font-bold text-[#3F3F3F] focus:outline-none cursor-pointer border-none disabled:cursor-not-allowed disabled:opacity-60"
           >
-            <option value="">{citySlug ? 'All Locations' : 'Select Location'}</option>
+            <option value="">{citySlug ? 'All Areas' : 'Select Area'}</option>
             {localities.map((l) => (
               <option key={l} value={l}>
                 {l}

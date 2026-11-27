@@ -3,7 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { Building, Compass } from 'lucide-react';
+import { Building } from 'lucide-react';
 import { PAJASA_CITIES } from '@/data/mockData';
 
 export function TrendingDestinations() {
@@ -13,10 +13,6 @@ export function TrendingDestinations() {
         
         {/* Header */}
         <div className="text-center max-w-2xl mx-auto space-y-2">
-          <span className="px-3.5 py-1 rounded-full bg-orange-50 border border-orange-200 text-[#F59A16] text-xs font-extrabold tracking-wider uppercase inline-flex items-center gap-1.5">
-            <Compass className="w-3.5 h-3.5" />
-            TOP CITIES
-          </span>
           <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-[#3F3F3F]">
             Top Cities
           </h2>

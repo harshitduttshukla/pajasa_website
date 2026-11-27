@@ -3,7 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { Briefcase, Building } from 'lucide-react';
+import { Building } from 'lucide-react';
 import { PAJASA_LOCATIONS } from '@/data/mockData';
 
 export function TopBusinessLocations() {
@@ -11,10 +11,6 @@ export function TopBusinessLocations() {
     <section className="py-20 bg-[#FAFAF8] text-[#3F3F3F] border-t border-[#E8E8E8]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         <div className="text-center max-w-2xl mx-auto space-y-2">
-          <span className="px-3.5 py-1 rounded-full bg-orange-50 border border-orange-200 text-[#F59A16] text-xs font-extrabold tracking-wider uppercase inline-flex items-center gap-1.5">
-            <Briefcase className="w-3.5 h-3.5" />
-            TOP BUSINESS LOCATIONS
-          </span>
           <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-[#3F3F3F]">
             Top Business Locations
           </h2>

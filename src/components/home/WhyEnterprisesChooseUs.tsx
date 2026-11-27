@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Coffee, DollarSign, Hand, Home, PlusCircle, ShieldCheck, Sparkles, Utensils, Wifi } from 'lucide-react';
+import { Coffee, DollarSign, Hand, Home, PlusCircle, ShieldCheck, Utensils, Wifi } from 'lucide-react';
 import { PAJASA_WHY_CHOOSE } from '@/data/mockData';
 
 export function WhyEnterprisesChooseUs() {
@@ -23,10 +23,6 @@ export function WhyEnterprisesChooseUs() {
         
         {/* Header */}
         <div className="text-center max-w-2xl mx-auto space-y-2">
-          <span className="px-3.5 py-1 rounded-full bg-orange-50 border border-orange-200 text-[#F59A16] text-xs font-extrabold tracking-wider uppercase inline-flex items-center gap-1.5">
-            <Sparkles className="w-3.5 h-3.5" />
-            ENTERPRISE STANDARDS
-          </span>
           <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-[#3F3F3F]">
             Why Companies Choose PAJASA
           </h2>

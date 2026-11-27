@@ -2,7 +2,7 @@
 
 import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronLeft, ChevronRight, GraduationCap } from 'lucide-react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { STUDENT_CITIES_DATA } from './cityData';
 import { CountryTabs } from './CountryTabs';
 import { CityCard } from './CityCard';
@@ -70,10 +70,6 @@ export function ExploreTopCities() {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-2.5">
-          <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-orange-50 border border-orange-200 text-[#F59A16] text-xs font-extrabold tracking-wider uppercase shadow-2xs">
-            <GraduationCap className="w-4 h-4 text-[#F59A16]" />
-            <span>INDIA CORPORATE & EXECUTIVE HUBS</span>
-          </div>
 
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-[#3F3F3F]">
             Explore Corporate Accommodation by Location

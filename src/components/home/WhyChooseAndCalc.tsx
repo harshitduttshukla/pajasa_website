@@ -55,7 +55,7 @@ export function WhyChooseAndCalc() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.15 }}
-            className="lg:col-span-6 bg-white border border-[#E8E8E8] rounded-2xl p-6 sm:p-8 shadow-xs space-y-5"
+            className="lg:col-span-6 bg-white border border-[#E8E8E8] rounded-2xl p-6 sm:p-8 shadow-xs flex flex-col justify-between gap-5"
           >
             <div className="flex items-center gap-3">
               <div className="inline-flex p-2.5 rounded-xl bg-orange-50">
