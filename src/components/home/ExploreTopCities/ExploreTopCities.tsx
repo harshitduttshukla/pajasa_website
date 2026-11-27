@@ -150,17 +150,6 @@ export function ExploreTopCities() {
           </div>
         </div>
 
-        {/* Bottom Sub-info / Hint */}
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-3 pt-2 text-xs text-[#666666] border-t border-[#EAEAEA]">
-          <span>
-            Explore verified serviced apartments for corporate stays in{' '}
-            <strong className="text-[#3F3F3F] font-bold">{selectedCountry.name}</strong>
-          </span>
-          <span className="text-[#666666] text-[11px]">
-            Showing <strong className="text-[#F59A16] font-bold">{selectedCountry.cities.length}</strong> major business destinations
-          </span>
-        </div>
-
       </div>
     </section>
   );
