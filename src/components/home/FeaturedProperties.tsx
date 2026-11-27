@@ -62,7 +62,7 @@ export function FeaturedProperties() {
         {/* Section Header */}
         <div className="flex flex-col items-center text-center gap-4 mb-10">
           <div className="space-y-1">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#3F3F3F] tracking-tight">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-[#3F3F3F]">
               Premium Service Apartments
             </h2>
             <p className="text-xs sm:text-sm text-[#666666] font-normal">

@@ -69,7 +69,7 @@ export function ExploreTopCities() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto space-y-2.5">
+        <div className="text-center max-w-5xl mx-auto space-y-2.5">
 
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-[#3F3F3F]">
             Explore Corporate Accommodation by Location

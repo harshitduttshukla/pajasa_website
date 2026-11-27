@@ -28,7 +28,7 @@ export function WhyChooseAndCalc() {
             transition={{ duration: 0.5 }}
             className="lg:col-span-6 bg-white border border-[#E8E8E8] rounded-2xl p-6 sm:p-8 shadow-xs flex flex-col"
           >
-            <h2 className="text-xl sm:text-2xl font-extrabold text-[#3F3F3F] mb-6">
+            <h2 className="text-2xl lg:text-3xl font-extrabold tracking-tight text-[#3F3F3F] mb-6">
               Why Choose <span className="text-[#F59A16]">PAJASA?</span>
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-6 flex-1 content-between">
@@ -61,7 +61,7 @@ export function WhyChooseAndCalc() {
               <div className="inline-flex p-2.5 rounded-xl bg-orange-50">
                 <Calculator className="w-5 h-5 text-[#F59A16]" strokeWidth={1.75} />
               </div>
-              <h2 className="text-xl sm:text-2xl font-extrabold text-[#3F3F3F]">Corporate Savings Calculator</h2>
+              <h2 className="text-2xl lg:text-3xl font-extrabold tracking-tight text-[#3F3F3F]">Corporate Savings Calculator</h2>
             </div>
 
             <div className="space-y-2">

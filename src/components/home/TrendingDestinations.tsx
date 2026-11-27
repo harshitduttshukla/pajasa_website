@@ -13,7 +13,7 @@ export function TrendingDestinations() {
         
         {/* Header */}
         <div className="text-center max-w-2xl mx-auto space-y-2">
-          <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-[#3F3F3F]">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-[#3F3F3F]">
             Top Cities
           </h2>
           <p className="text-xs sm:text-sm text-[#666666] font-normal leading-relaxed">

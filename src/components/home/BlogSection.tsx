@@ -48,7 +48,7 @@ export function BlogSection() {
   return (
     <section className="py-20 bg-white text-[#3F3F3F] border-t border-[#E8E8E8]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-        <div className="text-center max-w-2xl mx-auto space-y-2">
+        <div className="text-center max-w-5xl mx-auto space-y-2">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-[#3F3F3F]">
             Know More About Luxury Serviced Apartments
           </h2>

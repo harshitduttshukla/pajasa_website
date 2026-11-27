@@ -7,7 +7,7 @@ export function ClientLogos() {
   return (
     <section className="py-16 bg-white border-t border-[#E8E8E8]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
-        <h2 className="text-xl sm:text-2xl font-extrabold text-center text-[#3F3F3F] tracking-tight">
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-[#3F3F3F] text-center">
           Trusted by Industry Leaders
         </h2>
 

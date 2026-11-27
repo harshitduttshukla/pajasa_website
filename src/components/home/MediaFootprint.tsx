@@ -18,7 +18,7 @@ export function MediaFootprint() {
             transition={{ duration: 0.5 }}
             className="lg:col-span-6 bg-white border border-[#E8E8E8] rounded-2xl p-6 sm:p-8 shadow-xs flex flex-col"
           >
-            <h2 className="text-xl sm:text-2xl font-extrabold text-[#3F3F3F] tracking-tight mb-6">
+            <h2 className="text-2xl lg:text-3xl font-extrabold tracking-tight text-[#3F3F3F] mb-6">
               Our Media <span className="text-[#F59A16]">Footprint</span>
             </h2>
             <div className="grid grid-cols-3 gap-4 flex-1 content-center justify-items-center">

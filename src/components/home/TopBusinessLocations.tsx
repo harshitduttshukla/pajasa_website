@@ -11,7 +11,7 @@ export function TopBusinessLocations() {
     <section className="py-20 bg-[#FAFAF8] text-[#3F3F3F] border-t border-[#E8E8E8]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         <div className="text-center max-w-2xl mx-auto space-y-2">
-          <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-[#3F3F3F]">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-[#3F3F3F]">
             Top Business Locations
           </h2>
           <p className="text-xs sm:text-sm text-[#666666] font-normal leading-relaxed">
