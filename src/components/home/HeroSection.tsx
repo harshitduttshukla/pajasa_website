@@ -8,7 +8,7 @@ import { SearchCard } from './SearchCard';
 
 export function HeroSection() {
   return (
-    <section className="relative bg-[#fafaf8] pt-28 sm:pt-32 pb-12 lg:pb-16">
+    <section className="relative bg-[#fafaf8] pt-[68px] pb-12 lg:pb-16">
       {/* Edge-to-edge banner image with text overlay */}
       <div className="relative w-full min-h-[480px] sm:min-h-[540px] lg:min-h-[600px] overflow-hidden">
           <img
