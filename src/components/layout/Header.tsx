@@ -2,10 +2,8 @@
 
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
-import { usePathname, useRouter } from 'next/navigation';
-import { ChevronDown, Menu, Phone } from 'lucide-react';
-import { CITIES_DATA } from '@/data/mockData';
-import { cityUrl } from '@/lib/utils';
+import { usePathname } from 'next/navigation';
+import { Menu, Phone } from 'lucide-react';
 import { MobileNav } from './MobileNav';
 
 interface HeaderProps {
@@ -15,9 +13,7 @@ interface HeaderProps {
 export function Header({ onOpenBookingModal }: HeaderProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
-  const [selectedCity, setSelectedCity] = useState('');
   const pathname = usePathname();
-  const router = useRouter();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -32,14 +28,6 @@ export function Header({ onOpenBookingModal }: HeaderProps) {
     handleScroll();
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  const handleCitySelect = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    const city = e.target.value;
-    setSelectedCity(city);
-    if (city) {
-      router.push(cityUrl(city));
-    }
-  };
 
   const navLinks = [
     { label: 'HOME', href: '/' },
@@ -86,25 +74,8 @@ export function Header({ onOpenBookingModal }: HeaderProps) {
             })}
           </nav>
 
-          {/* Right Section: City Selector + Phone + Book Now */}
+          {/* Right Section: Phone + Book Now */}
           <div className="hidden lg:flex items-center gap-5">
-            {/* Functional City Selector Dropdown */}
-            <div className="relative flex items-center gap-1 text-xs font-bold text-[#3F3F3F] hover:text-[#F59A16] cursor-pointer">
-              <select
-                value={selectedCity}
-                onChange={handleCitySelect}
-                className="appearance-none bg-transparent pr-5 py-1 text-xs font-bold uppercase tracking-wider text-[#3F3F3F] focus:outline-none cursor-pointer border-none"
-                aria-label="Select City Navigation"
-              >
-                <option value="" className="text-[#3F3F3F]">SELECT CITY</option>
-                {CITIES_DATA.map((c) => (
-                  <option key={c.id} value={c.name} className="text-[#3F3F3F]">
-                    {c.name}
-                  </option>
-                ))}
-              </select>
-              <ChevronDown className="pointer-events-none absolute right-0 w-4 h-4" />
-            </div>
 
             {/* Phone Number */}
             <a
