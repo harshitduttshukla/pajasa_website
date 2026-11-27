@@ -2,132 +2,86 @@
 
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { Calendar, MapPin, Search, Users } from 'lucide-react';
+
+import { Building2, MapPin, Search } from 'lucide-react';
 import { CITIES_DATA } from '@/data/mockData';
+
+const slugify = (s: string) =>
+  s
+    .toLowerCase()
+    .replace(/\(.*?\)/g, '')
+    .trim()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-|-$/g, '');
 
 export function SearchCard() {
   const router = useRouter();
-  const [city, setCity] = useState('');
-  const [checkIn, setCheckIn] = useState('');
-  const [checkOut, setCheckOut] = useState('');
-  const [guests, setGuests] = useState('1');
+  const [citySlug, setCitySlug] = useState('');
+  const [location, setLocation] = useState('');
+
+  const selectedCity = CITIES_DATA.find((c) => c.slug === citySlug);
+  const localities = selectedCity?.popularLocalities ?? [];
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
-    const params = new URLSearchParams();
-    if (city) params.set('city', city);
-    if (checkIn) params.set('checkIn', checkIn);
-    if (checkOut) params.set('checkOut', checkOut);
-    if (guests) params.set('guests', guests);
-
-    router.push(`/properties?${params.toString()}`);
+    if (!citySlug) return;
+    router.push(location ? `/in/${citySlug}/${slugify(location)}/` : `/in/${citySlug}/`);
   };
 
   return (
-    <div className="w-full max-w-6xl mx-auto">
-      <div className="bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-5 shadow-xl border border-[#E8E8E8] text-[#3F3F3F]">
-        <form onSubmit={handleSearch} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-4 lg:gap-0 items-center">
-          
-          {/* LOCATION Field */}
-          <div className="lg:col-span-3 px-4 py-1.5 text-left lg:border-r lg:border-[#E8E8E8]">
-            <label htmlFor="search-location" className="block text-[10px] font-extrabold tracking-wider text-slate-500 uppercase">
-              LOCATION
-            </label>
-            <div className="flex items-center gap-2 mt-1">
-              <MapPin className="w-4 h-4 text-[#3F3F3F] shrink-0" strokeWidth={1.75} />
-              <select
-                id="search-location"
-                value={city}
-                onChange={(e) => setCity(e.target.value)}
-                className="w-full bg-transparent text-xs font-bold text-[#3F3F3F] focus:outline-none cursor-pointer border-none"
-              >
-                <option value="">Select Location</option>
-                {CITIES_DATA.map((c) => (
-                  <option key={c.id} value={c.name}>
-                    {c.name}
-                  </option>
-                ))}
-              </select>
-            </div>
-          </div>
-
-          {/* CHECK-IN Field */}
-          <div className="lg:col-span-3 px-4 py-1.5 text-left lg:border-r lg:border-[#E8E8E8]">
-            <label htmlFor="search-checkin" className="block text-[10px] font-extrabold tracking-wider text-slate-500 uppercase">
-              CHECK-IN
-            </label>
-            <div className="flex items-center gap-2 mt-1">
-              <Calendar className="w-4 h-4 text-[#3F3F3F] shrink-0" strokeWidth={1.75} />
-              <input
-                id="search-checkin"
-                type="date"
-                value={checkIn}
-                onChange={(e) => setCheckIn(e.target.value)}
-                className="w-full bg-transparent text-xs font-bold text-[#3F3F3F] focus:outline-none cursor-pointer"
-                placeholder="Select Date"
-              />
-            </div>
-          </div>
-
-          {/* CHECK-OUT Field */}
-          <div className="lg:col-span-3 px-4 py-1.5 text-left lg:border-r lg:border-[#E8E8E8]">
-            <label htmlFor="search-checkout" className="block text-[10px] font-extrabold tracking-wider text-slate-500 uppercase">
-              CHECK-OUT
-            </label>
-            <div className="flex items-center gap-2 mt-1">
-              <Calendar className="w-4 h-4 text-[#3F3F3F] shrink-0" strokeWidth={1.75} />
-              <input
-                id="search-checkout"
-                type="date"
-                value={checkOut}
-                onChange={(e) => setCheckOut(e.target.value)}
-                className="w-full bg-transparent text-xs font-bold text-[#3F3F3F] focus:outline-none cursor-pointer"
-                placeholder="Select Date"
-              />
-            </div>
-          </div>
-
-          {/* GUESTS Field */}
-          <div className="lg:col-span-3 lg:col-span-2 px-4 py-1.5 text-left">
-            <label htmlFor="search-guests" className="block text-[10px] font-extrabold tracking-wider text-slate-500 uppercase">
-              GUESTS
-            </label>
-            <div className="flex items-center gap-2 mt-1">
-              <Users className="w-4 h-4 text-[#3F3F3F] shrink-0" strokeWidth={1.75} />
-              <select
-                id="search-guests"
-                value={guests}
-                onChange={(e) => setGuests(e.target.value)}
-                className="w-full bg-transparent text-xs font-bold text-[#3F3F3F] focus:outline-none cursor-pointer border-none"
-              >
-                <option value="1">1 Guest</option>
-                <option value="2">2 Guests</option>
-                <option value="3">3 Guests</option>
-                <option value="4">4+ Guests</option>
-              </select>
-            </div>
-          </div>
-
-          {/* SEARCH APARTMENTS CTA Button */}
-          <div className="lg:col-span-1 lg:col-span-12 lg:col-start-[#] flex justify-end">
-            {/* On desktop this spans nicely or fits inside the 12-col grid */}
-          </div>
-
-        </form>
-
-        {/* Desktop grid layout adjustment */}
-        <div className="mt-3 lg:mt-0 flex justify-end lg:-mt-12 lg:pr-2 pointer-events-auto">
-          <button
-            onClick={handleSearch}
-            type="button"
-            className="w-full lg:w-auto px-6 py-3.5 rounded-xl bg-[#F59A16] hover:bg-[#e08a0b] text-[#3F3F3F] font-extrabold text-xs uppercase tracking-wider shadow-md transition-all flex items-center justify-center gap-2 cursor-pointer transform hover:-translate-y-0.5"
+    <div className="w-full max-w-4xl mx-auto">
+      <form
+        onSubmit={handleSearch}
+        className="bg-white rounded-2xl sm:rounded-full p-3 sm:p-2.5 shadow-xl border border-[#E8E8E8] text-[#3F3F3F] flex flex-col sm:flex-row items-stretch sm:items-center gap-2"
+      >
+        {/* CITY */}
+        <div className="flex-1 flex items-center gap-3 px-4 py-2 sm:border-r sm:border-[#E8E8E8]">
+          <MapPin className="w-5 h-5 text-[#3F3F3F] shrink-0" strokeWidth={1.75} />
+          <select
+            aria-label="Select City"
+            value={citySlug}
+            onChange={(e) => {
+              setCitySlug(e.target.value);
+              setLocation('');
+            }}
+            className="w-full bg-transparent text-sm font-bold text-[#3F3F3F] focus:outline-none cursor-pointer border-none"
           >
-            <span>SEARCH APARTMENTS</span>
-          </button>
+            <option value="">Select City</option>
+            {CITIES_DATA.map((c) => (
+              <option key={c.id} value={c.slug}>
+                {c.name}
+              </option>
+            ))}
+          </select>
         </div>
 
-      </div>
+        {/* LOCATION */}
+        <div className="flex-1 flex items-center gap-3 px-4 py-2">
+          <Building2 className="w-5 h-5 text-[#3F3F3F] shrink-0" strokeWidth={1.75} />
+          <select
+            aria-label="Select Location"
+            value={location}
+            onChange={(e) => setLocation(e.target.value)}
+            disabled={!citySlug}
+            className="w-full bg-transparent text-sm font-bold text-[#3F3F3F] focus:outline-none cursor-pointer border-none disabled:cursor-not-allowed disabled:opacity-60"
+          >
+            <option value="">{citySlug ? 'All Locations' : 'Select Location'}</option>
+            {localities.map((l) => (
+              <option key={l} value={l}>
+                {l}
+              </option>
+            ))}
+          </select>
+        </div>
+
+        <button
+          type="submit"
+          className="sm:w-56 px-6 py-3.5 rounded-full bg-[#F59A16] hover:bg-[#e08a0b] text-[#1f1f1f] font-bold text-sm shadow-md transition-all flex items-center justify-center gap-2 cursor-pointer"
+        >
+          <Search className="w-4 h-4" />
+          <span>Search</span>
+        </button>
+      </form>
     </div>
   );
 }
-
